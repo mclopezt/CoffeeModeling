@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link CoffeeModeling.impl.SecadoImpl#getHoraSombra <em>Hora Sombra</em>}</li>
  *   <li>{@link CoffeeModeling.impl.SecadoImpl#getHoraAlmacenamiento <em>Hora Almacenamiento</em>}</li>
  *   <li>{@link CoffeeModeling.impl.SecadoImpl#getHumedad <em>Humedad</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.SecadoImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +130,26 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 	 * @ordered
 	 */
 	protected float humedad = HUMEDAD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,6 +280,27 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.SECADO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -272,6 +314,8 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 				return getHoraAlmacenamiento();
 			case CoffeeModelingPackage.SECADO__HUMEDAD:
 				return getHumedad();
+			case CoffeeModelingPackage.SECADO__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,6 +342,9 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 				return;
 			case CoffeeModelingPackage.SECADO__HUMEDAD:
 				setHumedad((Float)newValue);
+				return;
+			case CoffeeModelingPackage.SECADO__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,6 +373,9 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 			case CoffeeModelingPackage.SECADO__HUMEDAD:
 				setHumedad(HUMEDAD_EDEFAULT);
 				return;
+			case CoffeeModelingPackage.SECADO__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,6 +398,8 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 				return HORA_ALMACENAMIENTO_EDEFAULT == null ? horaAlmacenamiento != null : !HORA_ALMACENAMIENTO_EDEFAULT.equals(horaAlmacenamiento);
 			case CoffeeModelingPackage.SECADO__HUMEDAD:
 				return humedad != HUMEDAD_EDEFAULT;
+			case CoffeeModelingPackage.SECADO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -372,6 +424,8 @@ public class SecadoImpl extends MinimalEObjectImpl.Container implements Secado {
 		result.append(horaAlmacenamiento);
 		result.append(", humedad: ");
 		result.append(humedad);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

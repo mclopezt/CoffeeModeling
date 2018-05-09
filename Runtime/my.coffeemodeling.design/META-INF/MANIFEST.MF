@@ -12,5 +12,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.common.acceleo.aql,
  co.edu.uniquindio.softwareIII.CoffeeModeling;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: %providerName
+Automatic-Module-Name: my.coffeemodeling.design
+Bundle-RequiredExecutionEnvironment: JavaSE-9

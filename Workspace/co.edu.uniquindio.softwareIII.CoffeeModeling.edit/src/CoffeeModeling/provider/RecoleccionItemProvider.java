@@ -61,6 +61,7 @@ public class RecoleccionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addFechaPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -88,6 +89,28 @@ public class RecoleccionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Recoleccion_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Recoleccion_id_feature", "_UI_Recoleccion_type"),
+				 CoffeeModelingPackage.Literals.RECOLECCION__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Recoleccion.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,7 +129,7 @@ public class RecoleccionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Recoleccion)object).getFecha();
+		String label = ((Recoleccion)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Recoleccion_type") :
 			getString("_UI_Recoleccion_type") + " " + label;
@@ -126,6 +149,7 @@ public class RecoleccionItemProvider
 
 		switch (notification.getFeatureID(Recoleccion.class)) {
 			case CoffeeModelingPackage.RECOLECCION__FECHA:
+			case CoffeeModelingPackage.RECOLECCION__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

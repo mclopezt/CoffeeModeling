@@ -62,6 +62,7 @@ public class TrillaItemProvider
 
 			addTecnicaEmpleadaPropertyDescriptor(object);
 			addMallaPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,6 +112,28 @@ public class TrillaItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Trilla_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Trilla_id_feature", "_UI_Trilla_type"),
+				 CoffeeModelingPackage.Literals.TRILLA__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Trilla.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +152,7 @@ public class TrillaItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Trilla)object).getTecnicaEmpleada();
+		String label = ((Trilla)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Trilla_type") :
 			getString("_UI_Trilla_type") + " " + label;
@@ -150,6 +173,7 @@ public class TrillaItemProvider
 		switch (notification.getFeatureID(Trilla.class)) {
 			case CoffeeModelingPackage.TRILLA__TECNICA_EMPLEADA:
 			case CoffeeModelingPackage.TRILLA__MALLA:
+			case CoffeeModelingPackage.TRILLA__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link CoffeeModeling.Lavado#getTecnica <em>Tecnica</em>}</li>
  *   <li>{@link CoffeeModeling.Lavado#getAguaUsada <em>Agua Usada</em>}</li>
+ *   <li>{@link CoffeeModeling.Lavado#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getLavado()
@@ -65,5 +66,31 @@ public interface Lavado extends EObject {
 	 * @generated
 	 */
 	EList<Agua> getAguaUsada();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getLavado_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Lavado#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Lavado

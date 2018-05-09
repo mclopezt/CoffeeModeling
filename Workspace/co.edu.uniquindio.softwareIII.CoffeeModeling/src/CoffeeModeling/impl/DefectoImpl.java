@@ -35,7 +35,7 @@ public class DefectoImpl extends MinimalEObjectImpl.Container implements Defecto
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TipoDefectos TIPO_EDEFAULT = TipoDefectos.NINGUNO;
+	protected static final TipoDefectos TIPO_EDEFAULT = TipoDefectos.VETEADO;
 
 	/**
 	 * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.

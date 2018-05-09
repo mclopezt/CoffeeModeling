@@ -152,6 +152,10 @@ public class CoffeeModelingAdapterFactory extends AdapterFactoryImpl {
 				return createProcesoAdapter();
 			}
 			@Override
+			public Adapter caseTerreno(Terreno object) {
+				return createTerrenoAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -462,6 +466,20 @@ public class CoffeeModelingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProcesoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CoffeeModeling.Terreno <em>Terreno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CoffeeModeling.Terreno
+	 * @generated
+	 */
+	public Adapter createTerrenoAdapter() {
 		return null;
 	}
 

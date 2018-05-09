@@ -1,17 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CoffeeModeling:Finca xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:CoffeeModeling="http://www.example.org/CoffeeModeling">
-  <lotes id="Lote1">
-    <siembra edadCultivo="3" variedad="Caturro"/>
-    <recoleccion/>
-    <flotes/>
-    <despulpe/>
-    <fermentacion/>
-    <lavado/>
-    <secado/>
-    <trilla/>
-    <seleccion/>
-    <tostion/>
-    <molienda/>
-    <empaque/>
-  </lotes>
+<?xml version="1.0" encoding="ASCII"?>
+<CoffeeModeling:Finca xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:CoffeeModeling="http://www.example.org/CoffeeModeling" nombre="La Juanita">
+  <terreno id="Terreno 1">
+    <siembra id="Siembra2">
+      <abono nombre="Abono1" loteRelacionado="//@terreno.0/@siembra.0/@lotes.0"/>
+      <abono nombre="Abono2"/>
+      <veneno nombre="Veneno1" loteRelacionado="//@terreno.0/@siembra.0/@lotes.0"/>
+      <veneno nombre="Veneno2"/>
+      <aguaRiego tipo="Riego1" loteRelacionado="//@terreno.0/@siembra.0/@lotes.1"/>
+      <aguaRiego tipo="Riego2"/>
+      <aguaRiego tipo="Riego3"/>
+      <lotes id="Lote 1" fechaFin="">
+        <recoleccion/>
+        <flotes>
+          <aguaUsada tipo="Usada1"/>
+        </flotes>
+        <despulpe/>
+        <fermentacion/>
+        <lavado>
+          <aguaUsada tipo="Usada1"/>
+        </lavado>
+        <secado/>
+        <trilla/>
+        <seleccion>
+          <defecto/>
+          <seleccionautomatica refMaquinaria="Maquina1"/>
+        </seleccion>
+        <tostion/>
+        <molienda/>
+        <empaque/>
+      </lotes>
+      <lotes id="Lote2"/>
+      <lotes id="Lote3"/>
+    </siembra>
+    <siembra id="Siembra1"/>
+    <siembra id="Siembra3"/>
+  </terreno>
+  <terreno id="Terreno2"/>
+  <terreno id="Terreno3"/>
+  <terreno id="Terreno 4"/>
+  <terreno id="Terreno 5"/>
+  <empleado nombreCompleto="Pepito Perez">
+    <procesoEnQueParticipa/>
+    <procesoEnQueParticipa nombreProceso="Flotes"/>
+  </empleado>
+  <empleado nombreCompleto="Secundino Suarez"/>
+  <empleado/>
 </CoffeeModeling:Finca>

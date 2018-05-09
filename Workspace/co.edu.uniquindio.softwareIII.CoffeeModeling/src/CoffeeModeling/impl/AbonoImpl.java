@@ -5,10 +5,12 @@ package CoffeeModeling.impl;
 import CoffeeModeling.Abono;
 import CoffeeModeling.CoffeeModelingPackage;
 
+import CoffeeModeling.Lote;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link CoffeeModeling.impl.AbonoImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link CoffeeModeling.impl.AbonoImpl#getFechaAplicado <em>Fecha Aplicado</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.AbonoImpl#getLoteRelacionado <em>Lote Relacionado</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +69,16 @@ public class AbonoImpl extends MinimalEObjectImpl.Container implements Abono {
 	 * @ordered
 	 */
 	protected String fechaAplicado = FECHA_APLICADO_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLoteRelacionado() <em>Lote Relacionado</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLoteRelacionado()
+	 * @generated
+	 * @ordered
+	 */
+	protected Lote loteRelacionado;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +146,44 @@ public class AbonoImpl extends MinimalEObjectImpl.Container implements Abono {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Lote getLoteRelacionado() {
+		if (loteRelacionado != null && loteRelacionado.eIsProxy()) {
+			InternalEObject oldLoteRelacionado = (InternalEObject)loteRelacionado;
+			loteRelacionado = (Lote)eResolveProxy(oldLoteRelacionado);
+			if (loteRelacionado != oldLoteRelacionado) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CoffeeModelingPackage.ABONO__LOTE_RELACIONADO, oldLoteRelacionado, loteRelacionado));
+			}
+		}
+		return loteRelacionado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Lote basicGetLoteRelacionado() {
+		return loteRelacionado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLoteRelacionado(Lote newLoteRelacionado) {
+		Lote oldLoteRelacionado = loteRelacionado;
+		loteRelacionado = newLoteRelacionado;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.ABONO__LOTE_RELACIONADO, oldLoteRelacionado, loteRelacionado));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -140,6 +191,9 @@ public class AbonoImpl extends MinimalEObjectImpl.Container implements Abono {
 				return getNombre();
 			case CoffeeModelingPackage.ABONO__FECHA_APLICADO:
 				return getFechaAplicado();
+			case CoffeeModelingPackage.ABONO__LOTE_RELACIONADO:
+				if (resolve) return getLoteRelacionado();
+				return basicGetLoteRelacionado();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +211,9 @@ public class AbonoImpl extends MinimalEObjectImpl.Container implements Abono {
 				return;
 			case CoffeeModelingPackage.ABONO__FECHA_APLICADO:
 				setFechaAplicado((String)newValue);
+				return;
+			case CoffeeModelingPackage.ABONO__LOTE_RELACIONADO:
+				setLoteRelacionado((Lote)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,6 +233,9 @@ public class AbonoImpl extends MinimalEObjectImpl.Container implements Abono {
 			case CoffeeModelingPackage.ABONO__FECHA_APLICADO:
 				setFechaAplicado(FECHA_APLICADO_EDEFAULT);
 				return;
+			case CoffeeModelingPackage.ABONO__LOTE_RELACIONADO:
+				setLoteRelacionado((Lote)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,6 +252,8 @@ public class AbonoImpl extends MinimalEObjectImpl.Container implements Abono {
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case CoffeeModelingPackage.ABONO__FECHA_APLICADO:
 				return FECHA_APLICADO_EDEFAULT == null ? fechaAplicado != null : !FECHA_APLICADO_EDEFAULT.equals(fechaAplicado);
+			case CoffeeModelingPackage.ABONO__LOTE_RELACIONADO:
+				return loteRelacionado != null;
 		}
 		return super.eIsSet(featureID);
 	}

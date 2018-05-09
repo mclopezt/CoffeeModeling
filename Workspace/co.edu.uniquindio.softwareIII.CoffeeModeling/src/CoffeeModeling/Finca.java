@@ -16,7 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link CoffeeModeling.Finca#getNombre <em>Nombre</em>}</li>
- *   <li>{@link CoffeeModeling.Finca#getLotes <em>Lotes</em>}</li>
+ *   <li>{@link CoffeeModeling.Finca#getTerreno <em>Terreno</em>}</li>
+ *   <li>{@link CoffeeModeling.Finca#getEmpleado <em>Empleado</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getFinca()
@@ -51,19 +52,35 @@ public interface Finca extends EObject {
 	void setNombre(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Lotes</b></em>' containment reference list.
-	 * The list contents are of type {@link CoffeeModeling.Lote}.
+	 * Returns the value of the '<em><b>Terreno</b></em>' containment reference list.
+	 * The list contents are of type {@link CoffeeModeling.Terreno}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Lotes</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Terreno</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lotes</em>' containment reference list.
-	 * @see CoffeeModeling.CoffeeModelingPackage#getFinca_Lotes()
+	 * @return the value of the '<em>Terreno</em>' containment reference list.
+	 * @see CoffeeModeling.CoffeeModelingPackage#getFinca_Terreno()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Lote> getLotes();
+	EList<Terreno> getTerreno();
+
+	/**
+	 * Returns the value of the '<em><b>Empleado</b></em>' containment reference list.
+	 * The list contents are of type {@link CoffeeModeling.Empleado}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Empleado</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Empleado</em>' containment reference list.
+	 * @see CoffeeModeling.CoffeeModelingPackage#getFinca_Empleado()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Empleado> getEmpleado();
 
 } // Finca

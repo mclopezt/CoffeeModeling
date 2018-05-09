@@ -5,6 +5,7 @@ package CoffeeModeling.impl;
 import CoffeeModeling.Abono;
 import CoffeeModeling.Agua;
 import CoffeeModeling.CoffeeModelingPackage;
+import CoffeeModeling.Lote;
 import CoffeeModeling.Siembra;
 import CoffeeModeling.Veneno;
 
@@ -38,6 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link CoffeeModeling.impl.SiembraImpl#getAbono <em>Abono</em>}</li>
  *   <li>{@link CoffeeModeling.impl.SiembraImpl#getVeneno <em>Veneno</em>}</li>
  *   <li>{@link CoffeeModeling.impl.SiembraImpl#getAguaRiego <em>Agua Riego</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.SiembraImpl#getId <em>Id</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.SiembraImpl#getLotes <em>Lotes</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,6 +135,36 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 	 * @ordered
 	 */
 	protected EList<Agua> aguaRiego;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLotes() <em>Lotes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Lote> lotes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -256,6 +289,39 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.SIEMBRA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Lote> getLotes() {
+		if (lotes == null) {
+			lotes = new EObjectContainmentEList<Lote>(Lote.class, this, CoffeeModelingPackage.SIEMBRA__LOTES);
+		}
+		return lotes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -265,6 +331,8 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 				return ((InternalEList<?>)getVeneno()).basicRemove(otherEnd, msgs);
 			case CoffeeModelingPackage.SIEMBRA__AGUA_RIEGO:
 				return ((InternalEList<?>)getAguaRiego()).basicRemove(otherEnd, msgs);
+			case CoffeeModelingPackage.SIEMBRA__LOTES:
+				return ((InternalEList<?>)getLotes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -289,6 +357,10 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 				return getVeneno();
 			case CoffeeModelingPackage.SIEMBRA__AGUA_RIEGO:
 				return getAguaRiego();
+			case CoffeeModelingPackage.SIEMBRA__ID:
+				return getId();
+			case CoffeeModelingPackage.SIEMBRA__LOTES:
+				return getLotes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -323,6 +395,13 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 				getAguaRiego().clear();
 				getAguaRiego().addAll((Collection<? extends Agua>)newValue);
 				return;
+			case CoffeeModelingPackage.SIEMBRA__ID:
+				setId((String)newValue);
+				return;
+			case CoffeeModelingPackage.SIEMBRA__LOTES:
+				getLotes().clear();
+				getLotes().addAll((Collection<? extends Lote>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -353,6 +432,12 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 			case CoffeeModelingPackage.SIEMBRA__AGUA_RIEGO:
 				getAguaRiego().clear();
 				return;
+			case CoffeeModelingPackage.SIEMBRA__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case CoffeeModelingPackage.SIEMBRA__LOTES:
+				getLotes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -377,6 +462,10 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 				return veneno != null && !veneno.isEmpty();
 			case CoffeeModelingPackage.SIEMBRA__AGUA_RIEGO:
 				return aguaRiego != null && !aguaRiego.isEmpty();
+			case CoffeeModelingPackage.SIEMBRA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case CoffeeModelingPackage.SIEMBRA__LOTES:
+				return lotes != null && !lotes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -397,6 +486,8 @@ public class SiembraImpl extends MinimalEObjectImpl.Container implements Siembra
 		result.append(fechaInicio);
 		result.append(", variedad: ");
 		result.append(variedad);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

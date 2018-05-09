@@ -65,6 +65,7 @@ public class SecadoItemProvider
 			addHoraSombraPropertyDescriptor(object);
 			addHoraAlmacenamientoPropertyDescriptor(object);
 			addHumedadPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -180,6 +181,28 @@ public class SecadoItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Secado_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Secado_id_feature", "_UI_Secado_type"),
+				 CoffeeModelingPackage.Literals.SECADO__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Secado.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -198,7 +221,7 @@ public class SecadoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Secado)object).getTipo();
+		String label = ((Secado)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Secado_type") :
 			getString("_UI_Secado_type") + " " + label;
@@ -222,6 +245,7 @@ public class SecadoItemProvider
 			case CoffeeModelingPackage.SECADO__HORA_SOMBRA:
 			case CoffeeModelingPackage.SECADO__HORA_ALMACENAMIENTO:
 			case CoffeeModelingPackage.SECADO__HUMEDAD:
+			case CoffeeModelingPackage.SECADO__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

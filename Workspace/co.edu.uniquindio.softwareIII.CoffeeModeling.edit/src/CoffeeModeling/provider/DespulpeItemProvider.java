@@ -62,6 +62,7 @@ public class DespulpeItemProvider
 
 			addRefMaquinariaPropertyDescriptor(object);
 			addFechaUltimoMantenimientoPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,6 +112,28 @@ public class DespulpeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Despulpe_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Despulpe_id_feature", "_UI_Despulpe_type"),
+				 CoffeeModelingPackage.Literals.DESPULPE__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Despulpe.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +152,7 @@ public class DespulpeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Despulpe)object).getRefMaquinaria();
+		String label = ((Despulpe)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Despulpe_type") :
 			getString("_UI_Despulpe_type") + " " + label;
@@ -150,6 +173,7 @@ public class DespulpeItemProvider
 		switch (notification.getFeatureID(Despulpe.class)) {
 			case CoffeeModelingPackage.DESPULPE__REF_MAQUINARIA:
 			case CoffeeModelingPackage.DESPULPE__FECHA_ULTIMO_MANTENIMIENTO:
+			case CoffeeModelingPackage.DESPULPE__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

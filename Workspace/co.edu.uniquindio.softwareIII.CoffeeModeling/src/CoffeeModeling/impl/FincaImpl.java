@@ -3,9 +3,9 @@
 package CoffeeModeling.impl;
 
 import CoffeeModeling.CoffeeModelingPackage;
+import CoffeeModeling.Empleado;
 import CoffeeModeling.Finca;
-import CoffeeModeling.Lote;
-
+import CoffeeModeling.Terreno;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link CoffeeModeling.impl.FincaImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link CoffeeModeling.impl.FincaImpl#getLotes <em>Lotes</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.FincaImpl#getTerreno <em>Terreno</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.FincaImpl#getEmpleado <em>Empleado</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,14 +59,24 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLotes() <em>Lotes</em>}' containment reference list.
+	 * The cached value of the '{@link #getTerreno() <em>Terreno</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLotes()
+	 * @see #getTerreno()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Lote> lotes;
+	protected EList<Terreno> terreno;
+
+	/**
+	 * The cached value of the '{@link #getEmpleado() <em>Empleado</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmpleado()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Empleado> empleado;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,11 +123,23 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Lote> getLotes() {
-		if (lotes == null) {
-			lotes = new EObjectContainmentEList<Lote>(Lote.class, this, CoffeeModelingPackage.FINCA__LOTES);
+	public EList<Terreno> getTerreno() {
+		if (terreno == null) {
+			terreno = new EObjectContainmentEList<Terreno>(Terreno.class, this, CoffeeModelingPackage.FINCA__TERRENO);
 		}
-		return lotes;
+		return terreno;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Empleado> getEmpleado() {
+		if (empleado == null) {
+			empleado = new EObjectContainmentEList<Empleado>(Empleado.class, this, CoffeeModelingPackage.FINCA__EMPLEADO);
+		}
+		return empleado;
 	}
 
 	/**
@@ -127,8 +150,10 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CoffeeModelingPackage.FINCA__LOTES:
-				return ((InternalEList<?>)getLotes()).basicRemove(otherEnd, msgs);
+			case CoffeeModelingPackage.FINCA__TERRENO:
+				return ((InternalEList<?>)getTerreno()).basicRemove(otherEnd, msgs);
+			case CoffeeModelingPackage.FINCA__EMPLEADO:
+				return ((InternalEList<?>)getEmpleado()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,8 +168,10 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 		switch (featureID) {
 			case CoffeeModelingPackage.FINCA__NOMBRE:
 				return getNombre();
-			case CoffeeModelingPackage.FINCA__LOTES:
-				return getLotes();
+			case CoffeeModelingPackage.FINCA__TERRENO:
+				return getTerreno();
+			case CoffeeModelingPackage.FINCA__EMPLEADO:
+				return getEmpleado();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,9 +188,13 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 			case CoffeeModelingPackage.FINCA__NOMBRE:
 				setNombre((String)newValue);
 				return;
-			case CoffeeModelingPackage.FINCA__LOTES:
-				getLotes().clear();
-				getLotes().addAll((Collection<? extends Lote>)newValue);
+			case CoffeeModelingPackage.FINCA__TERRENO:
+				getTerreno().clear();
+				getTerreno().addAll((Collection<? extends Terreno>)newValue);
+				return;
+			case CoffeeModelingPackage.FINCA__EMPLEADO:
+				getEmpleado().clear();
+				getEmpleado().addAll((Collection<? extends Empleado>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,8 +211,11 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 			case CoffeeModelingPackage.FINCA__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
-			case CoffeeModelingPackage.FINCA__LOTES:
-				getLotes().clear();
+			case CoffeeModelingPackage.FINCA__TERRENO:
+				getTerreno().clear();
+				return;
+			case CoffeeModelingPackage.FINCA__EMPLEADO:
+				getEmpleado().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,8 +231,10 @@ public class FincaImpl extends MinimalEObjectImpl.Container implements Finca {
 		switch (featureID) {
 			case CoffeeModelingPackage.FINCA__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-			case CoffeeModelingPackage.FINCA__LOTES:
-				return lotes != null && !lotes.isEmpty();
+			case CoffeeModelingPackage.FINCA__TERRENO:
+				return terreno != null && !terreno.isEmpty();
+			case CoffeeModelingPackage.FINCA__EMPLEADO:
+				return empleado != null && !empleado.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -64,6 +64,7 @@ public class LavadoItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTecnicaPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -82,6 +83,28 @@ public class LavadoItemProvider
 				 getString("_UI_Lavado_tecnica_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lavado_tecnica_feature", "_UI_Lavado_type"),
 				 CoffeeModelingPackage.Literals.LAVADO__TECNICA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lavado_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lavado_id_feature", "_UI_Lavado_type"),
+				 CoffeeModelingPackage.Literals.LAVADO__ID,
 				 true,
 				 false,
 				 false,
@@ -139,7 +162,7 @@ public class LavadoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Lavado)object).getTecnica();
+		String label = ((Lavado)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Lavado_type") :
 			getString("_UI_Lavado_type") + " " + label;
@@ -159,6 +182,7 @@ public class LavadoItemProvider
 
 		switch (notification.getFeatureID(Lavado.class)) {
 			case CoffeeModelingPackage.LAVADO__TECNICA:
+			case CoffeeModelingPackage.LAVADO__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CoffeeModelingPackage.LAVADO__AGUA_USADA:

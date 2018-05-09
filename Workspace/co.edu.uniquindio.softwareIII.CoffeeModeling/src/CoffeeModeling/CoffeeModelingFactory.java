@@ -211,6 +211,15 @@ public interface CoffeeModelingFactory extends EFactory {
 	Proceso createProceso();
 
 	/**
+	 * Returns a new object of class '<em>Terreno</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Terreno</em>'.
+	 * @generated
+	 */
+	Terreno createTerreno();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

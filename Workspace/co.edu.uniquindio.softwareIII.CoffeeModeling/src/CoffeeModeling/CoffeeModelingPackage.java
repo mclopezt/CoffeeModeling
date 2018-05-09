@@ -77,13 +77,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int FINCA__NOMBRE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Lotes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Terreno</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINCA__LOTES = 1;
+	int FINCA__TERRENO = 1;
+
+	/**
+	 * The feature id for the '<em><b>Empleado</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINCA__EMPLEADO = 2;
 
 	/**
 	 * The number of structural features of the '<em>Finca</em>' class.
@@ -92,7 +101,7 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINCA_FEATURE_COUNT = 2;
+	int FINCA_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Finca</em>' class.
@@ -123,40 +132,130 @@ public interface CoffeeModelingPackage extends EPackage {
 	int LOTE__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Latitud</b></em>' attribute.
+	 * The feature id for the '<em><b>Recoleccion</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOTE__LATITUD = 1;
+	int LOTE__RECOLECCION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Longitud</b></em>' attribute.
+	 * The feature id for the '<em><b>Flotes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOTE__LONGITUD = 2;
+	int LOTE__FLOTES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Altura</b></em>' attribute.
+	 * The feature id for the '<em><b>Despulpe</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOTE__ALTURA = 3;
+	int LOTE__DESPULPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Temperatura</b></em>' attribute.
+	 * The feature id for the '<em><b>Fermentacion</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOTE__TEMPERATURA = 4;
+	int LOTE__FERMENTACION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Lavado</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__LAVADO = 5;
+
+	/**
+	 * The feature id for the '<em><b>Secado</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__SECADO = 6;
+
+	/**
+	 * The feature id for the '<em><b>Trilla</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__TRILLA = 7;
+
+	/**
+	 * The feature id for the '<em><b>Seleccion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__SELECCION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Tostion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__TOSTION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Molienda</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__MOLIENDA = 10;
+
+	/**
+	 * The feature id for the '<em><b>Empaque</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__EMPAQUE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Fecha Inicio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__FECHA_INICIO = 12;
+
+	/**
+	 * The feature id for the '<em><b>Fecha Fin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__FECHA_FIN = 13;
+
+	/**
+	 * The feature id for the '<em><b>Empleados</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOTE__EMPLEADOS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Peso</b></em>' attribute.
@@ -165,124 +264,7 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOTE__PESO = 5;
-
-	/**
-	 * The feature id for the '<em><b>Siembra</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__SIEMBRA = 6;
-
-	/**
-	 * The feature id for the '<em><b>Recoleccion</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__RECOLECCION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Flotes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__FLOTES = 8;
-
-	/**
-	 * The feature id for the '<em><b>Despulpe</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__DESPULPE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Fermentacion</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__FERMENTACION = 10;
-
-	/**
-	 * The feature id for the '<em><b>Lavado</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__LAVADO = 11;
-
-	/**
-	 * The feature id for the '<em><b>Secado</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__SECADO = 12;
-
-	/**
-	 * The feature id for the '<em><b>Trilla</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__TRILLA = 13;
-
-	/**
-	 * The feature id for the '<em><b>Seleccion</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__SELECCION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Tostion</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__TOSTION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Molienda</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__MOLIENDA = 16;
-
-	/**
-	 * The feature id for the '<em><b>Empaque</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__EMPAQUE = 17;
-
-	/**
-	 * The feature id for the '<em><b>Empleado</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOTE__EMPLEADO = 18;
+	int LOTE__PESO = 15;
 
 	/**
 	 * The number of structural features of the '<em>Lote</em>' class.
@@ -291,7 +273,7 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOTE_FEATURE_COUNT = 19;
+	int LOTE_FEATURE_COUNT = 16;
 
 	/**
 	 * The number of operations of the '<em>Lote</em>' class.
@@ -367,13 +349,31 @@ public interface CoffeeModelingPackage extends EPackage {
 	int SIEMBRA__AGUA_RIEGO = 5;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIEMBRA__ID = 6;
+
+	/**
+	 * The feature id for the '<em><b>Lotes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIEMBRA__LOTES = 7;
+
+	/**
 	 * The number of structural features of the '<em>Siembra</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIEMBRA_FEATURE_COUNT = 6;
+	int SIEMBRA_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Siembra</em>' class.
@@ -413,13 +413,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int ABONO__FECHA_APLICADO = 1;
 
 	/**
+	 * The feature id for the '<em><b>Lote Relacionado</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABONO__LOTE_RELACIONADO = 2;
+
+	/**
 	 * The number of structural features of the '<em>Abono</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABONO_FEATURE_COUNT = 2;
+	int ABONO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Abono</em>' class.
@@ -459,13 +468,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int VENENO__FECHA_APLICADO = 1;
 
 	/**
+	 * The feature id for the '<em><b>Lote Relacionado</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VENENO__LOTE_RELACIONADO = 2;
+
+	/**
 	 * The number of structural features of the '<em>Veneno</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VENENO_FEATURE_COUNT = 2;
+	int VENENO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Veneno</em>' class.
@@ -496,13 +514,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int RECOLECCION__FECHA = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECOLECCION__ID = 1;
+
+	/**
 	 * The number of structural features of the '<em>Recoleccion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECOLECCION_FEATURE_COUNT = 1;
+	int RECOLECCION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Recoleccion</em>' class.
@@ -542,13 +569,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int FLOTES__AGUA_USADA = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOTES__ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Flotes</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOTES_FEATURE_COUNT = 2;
+	int FLOTES_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Flotes</em>' class.
@@ -588,13 +624,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int DESPULPE__FECHA_ULTIMO_MANTENIMIENTO = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESPULPE__ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Despulpe</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESPULPE_FEATURE_COUNT = 2;
+	int DESPULPE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Despulpe</em>' class.
@@ -634,13 +679,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int AGUA__CANTIDAD = 1;
 
 	/**
+	 * The feature id for the '<em><b>Lote Relacionado</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGUA__LOTE_RELACIONADO = 2;
+
+	/**
 	 * The number of structural features of the '<em>Agua</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGUA_FEATURE_COUNT = 2;
+	int AGUA_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Agua</em>' class.
@@ -698,13 +752,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int FERMENTACION__HORA_SOMBRA = 3;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FERMENTACION__ID = 4;
+
+	/**
 	 * The number of structural features of the '<em>Fermentacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FERMENTACION_FEATURE_COUNT = 4;
+	int FERMENTACION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Fermentacion</em>' class.
@@ -744,13 +807,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int LAVADO__AGUA_USADA = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAVADO__ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Lavado</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAVADO_FEATURE_COUNT = 2;
+	int LAVADO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Lavado</em>' class.
@@ -817,13 +889,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int SECADO__HUMEDAD = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECADO__ID = 5;
+
+	/**
 	 * The number of structural features of the '<em>Secado</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECADO_FEATURE_COUNT = 5;
+	int SECADO_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Secado</em>' class.
@@ -863,13 +944,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int TRILLA__MALLA = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRILLA__ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Trilla</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRILLA_FEATURE_COUNT = 2;
+	int TRILLA_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Trilla</em>' class.
@@ -927,13 +1017,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int SELECCION__SELECCIONAUTOMATICA = 3;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECCION__ID = 4;
+
+	/**
 	 * The number of structural features of the '<em>Seleccion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECCION_FEATURE_COUNT = 4;
+	int SELECCION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Seleccion</em>' class.
@@ -991,13 +1090,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int TOSTION__FECHA_ULTIMO_MANTENIMIENTO = 3;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSTION__ID = 4;
+
+	/**
 	 * The number of structural features of the '<em>Tostion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSTION_FEATURE_COUNT = 4;
+	int TOSTION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Tostion</em>' class.
@@ -1120,13 +1228,22 @@ public interface CoffeeModelingPackage extends EPackage {
 	int MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOLIENDA__ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Molienda</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOLIENDA_FEATURE_COUNT = 2;
+	int MOLIENDA_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Molienda</em>' class.
@@ -1285,6 +1402,88 @@ public interface CoffeeModelingPackage extends EPackage {
 	int PROCESO_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link CoffeeModeling.impl.TerrenoImpl <em>Terreno</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CoffeeModeling.impl.TerrenoImpl
+	 * @see CoffeeModeling.impl.CoffeeModelingPackageImpl#getTerreno()
+	 * @generated
+	 */
+	int TERRENO = 21;
+
+	/**
+	 * The feature id for the '<em><b>Siembra</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO__SIEMBRA = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Altura</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO__ALTURA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Temperatura</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO__TEMPERATURA = 3;
+
+	/**
+	 * The feature id for the '<em><b>Longitud</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO__LONGITUD = 4;
+
+	/**
+	 * The feature id for the '<em><b>Latitud</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO__LATITUD = 5;
+
+	/**
+	 * The number of structural features of the '<em>Terreno</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Terreno</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERRENO_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link CoffeeModeling.TipoDefectos <em>Tipo Defectos</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1292,7 +1491,7 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @see CoffeeModeling.impl.CoffeeModelingPackageImpl#getTipoDefectos()
 	 * @generated
 	 */
-	int TIPO_DEFECTOS = 21;
+	int TIPO_DEFECTOS = 22;
 
 	/**
 	 * The meta object id for the '{@link CoffeeModeling.Procesos <em>Procesos</em>}' enum.
@@ -1302,7 +1501,7 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @see CoffeeModeling.impl.CoffeeModelingPackageImpl#getProcesos()
 	 * @generated
 	 */
-	int PROCESOS = 22;
+	int PROCESOS = 23;
 
 
 	/**
@@ -1327,15 +1526,26 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getFinca_Nombre();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Finca#getLotes <em>Lotes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Finca#getTerreno <em>Terreno</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lotes</em>'.
-	 * @see CoffeeModeling.Finca#getLotes()
+	 * @return the meta object for the containment reference list '<em>Terreno</em>'.
+	 * @see CoffeeModeling.Finca#getTerreno()
 	 * @see #getFinca()
 	 * @generated
 	 */
-	EReference getFinca_Lotes();
+	EReference getFinca_Terreno();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Finca#getEmpleado <em>Empleado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Empleado</em>'.
+	 * @see CoffeeModeling.Finca#getEmpleado()
+	 * @see #getFinca()
+	 * @generated
+	 */
+	EReference getFinca_Empleado();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Lote <em>Lote</em>}'.
@@ -1359,48 +1569,158 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getLote_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getLatitud <em>Latitud</em>}'.
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getRecoleccion <em>Recoleccion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Latitud</em>'.
-	 * @see CoffeeModeling.Lote#getLatitud()
+	 * @return the meta object for the containment reference '<em>Recoleccion</em>'.
+	 * @see CoffeeModeling.Lote#getRecoleccion()
 	 * @see #getLote()
 	 * @generated
 	 */
-	EAttribute getLote_Latitud();
+	EReference getLote_Recoleccion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getLongitud <em>Longitud</em>}'.
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getFlotes <em>Flotes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Longitud</em>'.
-	 * @see CoffeeModeling.Lote#getLongitud()
+	 * @return the meta object for the containment reference '<em>Flotes</em>'.
+	 * @see CoffeeModeling.Lote#getFlotes()
 	 * @see #getLote()
 	 * @generated
 	 */
-	EAttribute getLote_Longitud();
+	EReference getLote_Flotes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getAltura <em>Altura</em>}'.
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getDespulpe <em>Despulpe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Altura</em>'.
-	 * @see CoffeeModeling.Lote#getAltura()
+	 * @return the meta object for the containment reference '<em>Despulpe</em>'.
+	 * @see CoffeeModeling.Lote#getDespulpe()
 	 * @see #getLote()
 	 * @generated
 	 */
-	EAttribute getLote_Altura();
+	EReference getLote_Despulpe();
 
 	/**
-	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getTemperatura <em>Temperatura</em>}'.
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getFermentacion <em>Fermentacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Temperatura</em>'.
-	 * @see CoffeeModeling.Lote#getTemperatura()
+	 * @return the meta object for the containment reference '<em>Fermentacion</em>'.
+	 * @see CoffeeModeling.Lote#getFermentacion()
 	 * @see #getLote()
 	 * @generated
 	 */
-	EAttribute getLote_Temperatura();
+	EReference getLote_Fermentacion();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getLavado <em>Lavado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Lavado</em>'.
+	 * @see CoffeeModeling.Lote#getLavado()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Lavado();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getSecado <em>Secado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Secado</em>'.
+	 * @see CoffeeModeling.Lote#getSecado()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Secado();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getTrilla <em>Trilla</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Trilla</em>'.
+	 * @see CoffeeModeling.Lote#getTrilla()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Trilla();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getSeleccion <em>Seleccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Seleccion</em>'.
+	 * @see CoffeeModeling.Lote#getSeleccion()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Seleccion();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getTostion <em>Tostion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tostion</em>'.
+	 * @see CoffeeModeling.Lote#getTostion()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Tostion();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getMolienda <em>Molienda</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Molienda</em>'.
+	 * @see CoffeeModeling.Lote#getMolienda()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Molienda();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link CoffeeModeling.Lote#getEmpaque <em>Empaque</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Empaque</em>'.
+	 * @see CoffeeModeling.Lote#getEmpaque()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Empaque();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getFechaInicio <em>Fecha Inicio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fecha Inicio</em>'.
+	 * @see CoffeeModeling.Lote#getFechaInicio()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EAttribute getLote_FechaInicio();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getFechaFin <em>Fecha Fin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fecha Fin</em>'.
+	 * @see CoffeeModeling.Lote#getFechaFin()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EAttribute getLote_FechaFin();
+
+	/**
+	 * Returns the meta object for the reference list '{@link CoffeeModeling.Lote#getEmpleados <em>Empleados</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Empleados</em>'.
+	 * @see CoffeeModeling.Lote#getEmpleados()
+	 * @see #getLote()
+	 * @generated
+	 */
+	EReference getLote_Empleados();
 
 	/**
 	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lote#getPeso <em>Peso</em>}'.
@@ -1412,149 +1732,6 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLote_Peso();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getSiembra <em>Siembra</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Siembra</em>'.
-	 * @see CoffeeModeling.Lote#getSiembra()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Siembra();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getRecoleccion <em>Recoleccion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Recoleccion</em>'.
-	 * @see CoffeeModeling.Lote#getRecoleccion()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Recoleccion();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getFlotes <em>Flotes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Flotes</em>'.
-	 * @see CoffeeModeling.Lote#getFlotes()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Flotes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getDespulpe <em>Despulpe</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Despulpe</em>'.
-	 * @see CoffeeModeling.Lote#getDespulpe()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Despulpe();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getFermentacion <em>Fermentacion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Fermentacion</em>'.
-	 * @see CoffeeModeling.Lote#getFermentacion()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Fermentacion();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getLavado <em>Lavado</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lavado</em>'.
-	 * @see CoffeeModeling.Lote#getLavado()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Lavado();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getSecado <em>Secado</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Secado</em>'.
-	 * @see CoffeeModeling.Lote#getSecado()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Secado();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getTrilla <em>Trilla</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Trilla</em>'.
-	 * @see CoffeeModeling.Lote#getTrilla()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Trilla();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getSeleccion <em>Seleccion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Seleccion</em>'.
-	 * @see CoffeeModeling.Lote#getSeleccion()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Seleccion();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getTostion <em>Tostion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tostion</em>'.
-	 * @see CoffeeModeling.Lote#getTostion()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Tostion();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getMolienda <em>Molienda</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Molienda</em>'.
-	 * @see CoffeeModeling.Lote#getMolienda()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Molienda();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getEmpaque <em>Empaque</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Empaque</em>'.
-	 * @see CoffeeModeling.Lote#getEmpaque()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Empaque();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Lote#getEmpleado <em>Empleado</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Empleado</em>'.
-	 * @see CoffeeModeling.Lote#getEmpleado()
-	 * @see #getLote()
-	 * @generated
-	 */
-	EReference getLote_Empleado();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Siembra <em>Siembra</em>}'.
@@ -1633,6 +1810,28 @@ public interface CoffeeModelingPackage extends EPackage {
 	EReference getSiembra_AguaRiego();
 
 	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Siembra#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Siembra#getId()
+	 * @see #getSiembra()
+	 * @generated
+	 */
+	EAttribute getSiembra_Id();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Siembra#getLotes <em>Lotes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lotes</em>'.
+	 * @see CoffeeModeling.Siembra#getLotes()
+	 * @see #getSiembra()
+	 * @generated
+	 */
+	EReference getSiembra_Lotes();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Abono <em>Abono</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1663,6 +1862,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAbono_FechaAplicado();
+
+	/**
+	 * Returns the meta object for the reference '{@link CoffeeModeling.Abono#getLoteRelacionado <em>Lote Relacionado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Lote Relacionado</em>'.
+	 * @see CoffeeModeling.Abono#getLoteRelacionado()
+	 * @see #getAbono()
+	 * @generated
+	 */
+	EReference getAbono_LoteRelacionado();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Veneno <em>Veneno</em>}'.
@@ -1697,6 +1907,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getVeneno_FechaAplicado();
 
 	/**
+	 * Returns the meta object for the reference '{@link CoffeeModeling.Veneno#getLoteRelacionado <em>Lote Relacionado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Lote Relacionado</em>'.
+	 * @see CoffeeModeling.Veneno#getLoteRelacionado()
+	 * @see #getVeneno()
+	 * @generated
+	 */
+	EReference getVeneno_LoteRelacionado();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Recoleccion <em>Recoleccion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1716,6 +1937,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRecoleccion_Fecha();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Recoleccion#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Recoleccion#getId()
+	 * @see #getRecoleccion()
+	 * @generated
+	 */
+	EAttribute getRecoleccion_Id();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Flotes <em>Flotes</em>}'.
@@ -1750,6 +1982,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	EReference getFlotes_AguaUsada();
 
 	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Flotes#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Flotes#getId()
+	 * @see #getFlotes()
+	 * @generated
+	 */
+	EAttribute getFlotes_Id();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Despulpe <em>Despulpe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1782,6 +2025,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getDespulpe_FechaUltimoMantenimiento();
 
 	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Despulpe#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Despulpe#getId()
+	 * @see #getDespulpe()
+	 * @generated
+	 */
+	EAttribute getDespulpe_Id();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Agua <em>Agua</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1812,6 +2066,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAgua_Cantidad();
+
+	/**
+	 * Returns the meta object for the reference '{@link CoffeeModeling.Agua#getLoteRelacionado <em>Lote Relacionado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Lote Relacionado</em>'.
+	 * @see CoffeeModeling.Agua#getLoteRelacionado()
+	 * @see #getAgua()
+	 * @generated
+	 */
+	EReference getAgua_LoteRelacionado();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Fermentacion <em>Fermentacion</em>}'.
@@ -1868,6 +2133,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getFermentacion_HoraSombra();
 
 	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Fermentacion#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Fermentacion#getId()
+	 * @see #getFermentacion()
+	 * @generated
+	 */
+	EAttribute getFermentacion_Id();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Lavado <em>Lavado</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1898,6 +2174,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLavado_AguaUsada();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Lavado#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Lavado#getId()
+	 * @see #getLavado()
+	 * @generated
+	 */
+	EAttribute getLavado_Id();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Secado <em>Secado</em>}'.
@@ -1965,6 +2252,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getSecado_Humedad();
 
 	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Secado#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Secado#getId()
+	 * @see #getSecado()
+	 * @generated
+	 */
+	EAttribute getSecado_Id();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Trilla <em>Trilla</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1995,6 +2293,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTrilla_Malla();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Trilla#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Trilla#getId()
+	 * @see #getTrilla()
+	 * @generated
+	 */
+	EAttribute getTrilla_Id();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Seleccion <em>Seleccion</em>}'.
@@ -2051,6 +2360,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	EReference getSeleccion_Seleccionautomatica();
 
 	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Seleccion#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Seleccion#getId()
+	 * @see #getSeleccion()
+	 * @generated
+	 */
+	EAttribute getSeleccion_Id();
+
+	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Tostion <em>Tostion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2103,6 +2423,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTostion_FechaUltimoMantenimiento();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Tostion#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Tostion#getId()
+	 * @see #getTostion()
+	 * @generated
+	 */
+	EAttribute getTostion_Id();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Defecto <em>Defecto</em>}'.
@@ -2188,6 +2519,17 @@ public interface CoffeeModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMolienda_FechaUltimoMantenimiento();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Molienda#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Molienda#getId()
+	 * @see #getMolienda()
+	 * @generated
+	 */
+	EAttribute getMolienda_Id();
 
 	/**
 	 * Returns the meta object for class '{@link CoffeeModeling.Empaque <em>Empaque</em>}'.
@@ -2297,6 +2639,82 @@ public interface CoffeeModelingPackage extends EPackage {
 	EAttribute getProceso_NombreProceso();
 
 	/**
+	 * Returns the meta object for class '{@link CoffeeModeling.Terreno <em>Terreno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Terreno</em>'.
+	 * @see CoffeeModeling.Terreno
+	 * @generated
+	 */
+	EClass getTerreno();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link CoffeeModeling.Terreno#getSiembra <em>Siembra</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Siembra</em>'.
+	 * @see CoffeeModeling.Terreno#getSiembra()
+	 * @see #getTerreno()
+	 * @generated
+	 */
+	EReference getTerreno_Siembra();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Terreno#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see CoffeeModeling.Terreno#getId()
+	 * @see #getTerreno()
+	 * @generated
+	 */
+	EAttribute getTerreno_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Terreno#getAltura <em>Altura</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Altura</em>'.
+	 * @see CoffeeModeling.Terreno#getAltura()
+	 * @see #getTerreno()
+	 * @generated
+	 */
+	EAttribute getTerreno_Altura();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Terreno#getTemperatura <em>Temperatura</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temperatura</em>'.
+	 * @see CoffeeModeling.Terreno#getTemperatura()
+	 * @see #getTerreno()
+	 * @generated
+	 */
+	EAttribute getTerreno_Temperatura();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Terreno#getLongitud <em>Longitud</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Longitud</em>'.
+	 * @see CoffeeModeling.Terreno#getLongitud()
+	 * @see #getTerreno()
+	 * @generated
+	 */
+	EAttribute getTerreno_Longitud();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CoffeeModeling.Terreno#getLatitud <em>Latitud</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Latitud</em>'.
+	 * @see CoffeeModeling.Terreno#getLatitud()
+	 * @see #getTerreno()
+	 * @generated
+	 */
+	EAttribute getTerreno_Latitud();
+
+	/**
 	 * Returns the meta object for enum '{@link CoffeeModeling.TipoDefectos <em>Tipo Defectos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2358,12 +2776,20 @@ public interface CoffeeModelingPackage extends EPackage {
 		EAttribute FINCA__NOMBRE = eINSTANCE.getFinca_Nombre();
 
 		/**
-		 * The meta object literal for the '<em><b>Lotes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Terreno</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FINCA__LOTES = eINSTANCE.getFinca_Lotes();
+		EReference FINCA__TERRENO = eINSTANCE.getFinca_Terreno();
+
+		/**
+		 * The meta object literal for the '<em><b>Empleado</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FINCA__EMPLEADO = eINSTANCE.getFinca_Empleado();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.LoteImpl <em>Lote</em>}' class.
@@ -2384,36 +2810,116 @@ public interface CoffeeModelingPackage extends EPackage {
 		EAttribute LOTE__ID = eINSTANCE.getLote_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Latitud</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Recoleccion</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOTE__LATITUD = eINSTANCE.getLote_Latitud();
+		EReference LOTE__RECOLECCION = eINSTANCE.getLote_Recoleccion();
 
 		/**
-		 * The meta object literal for the '<em><b>Longitud</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Flotes</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOTE__LONGITUD = eINSTANCE.getLote_Longitud();
+		EReference LOTE__FLOTES = eINSTANCE.getLote_Flotes();
 
 		/**
-		 * The meta object literal for the '<em><b>Altura</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Despulpe</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOTE__ALTURA = eINSTANCE.getLote_Altura();
+		EReference LOTE__DESPULPE = eINSTANCE.getLote_Despulpe();
 
 		/**
-		 * The meta object literal for the '<em><b>Temperatura</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Fermentacion</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOTE__TEMPERATURA = eINSTANCE.getLote_Temperatura();
+		EReference LOTE__FERMENTACION = eINSTANCE.getLote_Fermentacion();
+
+		/**
+		 * The meta object literal for the '<em><b>Lavado</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__LAVADO = eINSTANCE.getLote_Lavado();
+
+		/**
+		 * The meta object literal for the '<em><b>Secado</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__SECADO = eINSTANCE.getLote_Secado();
+
+		/**
+		 * The meta object literal for the '<em><b>Trilla</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__TRILLA = eINSTANCE.getLote_Trilla();
+
+		/**
+		 * The meta object literal for the '<em><b>Seleccion</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__SELECCION = eINSTANCE.getLote_Seleccion();
+
+		/**
+		 * The meta object literal for the '<em><b>Tostion</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__TOSTION = eINSTANCE.getLote_Tostion();
+
+		/**
+		 * The meta object literal for the '<em><b>Molienda</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__MOLIENDA = eINSTANCE.getLote_Molienda();
+
+		/**
+		 * The meta object literal for the '<em><b>Empaque</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__EMPAQUE = eINSTANCE.getLote_Empaque();
+
+		/**
+		 * The meta object literal for the '<em><b>Fecha Inicio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOTE__FECHA_INICIO = eINSTANCE.getLote_FechaInicio();
+
+		/**
+		 * The meta object literal for the '<em><b>Fecha Fin</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOTE__FECHA_FIN = eINSTANCE.getLote_FechaFin();
+
+		/**
+		 * The meta object literal for the '<em><b>Empleados</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOTE__EMPLEADOS = eINSTANCE.getLote_Empleados();
 
 		/**
 		 * The meta object literal for the '<em><b>Peso</b></em>' attribute feature.
@@ -2422,110 +2928,6 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LOTE__PESO = eINSTANCE.getLote_Peso();
-
-		/**
-		 * The meta object literal for the '<em><b>Siembra</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__SIEMBRA = eINSTANCE.getLote_Siembra();
-
-		/**
-		 * The meta object literal for the '<em><b>Recoleccion</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__RECOLECCION = eINSTANCE.getLote_Recoleccion();
-
-		/**
-		 * The meta object literal for the '<em><b>Flotes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__FLOTES = eINSTANCE.getLote_Flotes();
-
-		/**
-		 * The meta object literal for the '<em><b>Despulpe</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__DESPULPE = eINSTANCE.getLote_Despulpe();
-
-		/**
-		 * The meta object literal for the '<em><b>Fermentacion</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__FERMENTACION = eINSTANCE.getLote_Fermentacion();
-
-		/**
-		 * The meta object literal for the '<em><b>Lavado</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__LAVADO = eINSTANCE.getLote_Lavado();
-
-		/**
-		 * The meta object literal for the '<em><b>Secado</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__SECADO = eINSTANCE.getLote_Secado();
-
-		/**
-		 * The meta object literal for the '<em><b>Trilla</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__TRILLA = eINSTANCE.getLote_Trilla();
-
-		/**
-		 * The meta object literal for the '<em><b>Seleccion</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__SELECCION = eINSTANCE.getLote_Seleccion();
-
-		/**
-		 * The meta object literal for the '<em><b>Tostion</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__TOSTION = eINSTANCE.getLote_Tostion();
-
-		/**
-		 * The meta object literal for the '<em><b>Molienda</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__MOLIENDA = eINSTANCE.getLote_Molienda();
-
-		/**
-		 * The meta object literal for the '<em><b>Empaque</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__EMPAQUE = eINSTANCE.getLote_Empaque();
-
-		/**
-		 * The meta object literal for the '<em><b>Empleado</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOTE__EMPLEADO = eINSTANCE.getLote_Empleado();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.SiembraImpl <em>Siembra</em>}' class.
@@ -2586,6 +2988,22 @@ public interface CoffeeModelingPackage extends EPackage {
 		EReference SIEMBRA__AGUA_RIEGO = eINSTANCE.getSiembra_AguaRiego();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIEMBRA__ID = eINSTANCE.getSiembra_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Lotes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIEMBRA__LOTES = eINSTANCE.getSiembra_Lotes();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.AbonoImpl <em>Abono</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2610,6 +3028,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ABONO__FECHA_APLICADO = eINSTANCE.getAbono_FechaAplicado();
+
+		/**
+		 * The meta object literal for the '<em><b>Lote Relacionado</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABONO__LOTE_RELACIONADO = eINSTANCE.getAbono_LoteRelacionado();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.VenenoImpl <em>Veneno</em>}' class.
@@ -2638,6 +3064,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		EAttribute VENENO__FECHA_APLICADO = eINSTANCE.getVeneno_FechaAplicado();
 
 		/**
+		 * The meta object literal for the '<em><b>Lote Relacionado</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VENENO__LOTE_RELACIONADO = eINSTANCE.getVeneno_LoteRelacionado();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.RecoleccionImpl <em>Recoleccion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2654,6 +3088,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RECOLECCION__FECHA = eINSTANCE.getRecoleccion_Fecha();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECOLECCION__ID = eINSTANCE.getRecoleccion_Id();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.FlotesImpl <em>Flotes</em>}' class.
@@ -2682,6 +3124,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		EReference FLOTES__AGUA_USADA = eINSTANCE.getFlotes_AguaUsada();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLOTES__ID = eINSTANCE.getFlotes_Id();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.DespulpeImpl <em>Despulpe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2708,6 +3158,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		EAttribute DESPULPE__FECHA_ULTIMO_MANTENIMIENTO = eINSTANCE.getDespulpe_FechaUltimoMantenimiento();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DESPULPE__ID = eINSTANCE.getDespulpe_Id();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.AguaImpl <em>Agua</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2732,6 +3190,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute AGUA__CANTIDAD = eINSTANCE.getAgua_Cantidad();
+
+		/**
+		 * The meta object literal for the '<em><b>Lote Relacionado</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AGUA__LOTE_RELACIONADO = eINSTANCE.getAgua_LoteRelacionado();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.FermentacionImpl <em>Fermentacion</em>}' class.
@@ -2776,6 +3242,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		EAttribute FERMENTACION__HORA_SOMBRA = eINSTANCE.getFermentacion_HoraSombra();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FERMENTACION__ID = eINSTANCE.getFermentacion_Id();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.LavadoImpl <em>Lavado</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2800,6 +3274,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LAVADO__AGUA_USADA = eINSTANCE.getLavado_AguaUsada();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAVADO__ID = eINSTANCE.getLavado_Id();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.SecadoImpl <em>Secado</em>}' class.
@@ -2852,6 +3334,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		EAttribute SECADO__HUMEDAD = eINSTANCE.getSecado_Humedad();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SECADO__ID = eINSTANCE.getSecado_Id();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.TrillaImpl <em>Trilla</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2876,6 +3366,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TRILLA__MALLA = eINSTANCE.getTrilla_Malla();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRILLA__ID = eINSTANCE.getTrilla_Id();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.SeleccionImpl <em>Seleccion</em>}' class.
@@ -2920,6 +3418,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		EReference SELECCION__SELECCIONAUTOMATICA = eINSTANCE.getSeleccion_Seleccionautomatica();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECCION__ID = eINSTANCE.getSeleccion_Id();
+
+		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.TostionImpl <em>Tostion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2960,6 +3466,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSTION__FECHA_ULTIMO_MANTENIMIENTO = eINSTANCE.getTostion_FechaUltimoMantenimiento();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSTION__ID = eINSTANCE.getTostion_Id();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.DefectoImpl <em>Defecto</em>}' class.
@@ -3030,6 +3544,14 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO = eINSTANCE.getMolienda_FechaUltimoMantenimiento();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOLIENDA__ID = eINSTANCE.getMolienda_Id();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.impl.EmpaqueImpl <em>Empaque</em>}' class.
@@ -3116,6 +3638,64 @@ public interface CoffeeModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROCESO__NOMBRE_PROCESO = eINSTANCE.getProceso_NombreProceso();
+
+		/**
+		 * The meta object literal for the '{@link CoffeeModeling.impl.TerrenoImpl <em>Terreno</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CoffeeModeling.impl.TerrenoImpl
+		 * @see CoffeeModeling.impl.CoffeeModelingPackageImpl#getTerreno()
+		 * @generated
+		 */
+		EClass TERRENO = eINSTANCE.getTerreno();
+
+		/**
+		 * The meta object literal for the '<em><b>Siembra</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TERRENO__SIEMBRA = eINSTANCE.getTerreno_Siembra();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TERRENO__ID = eINSTANCE.getTerreno_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Altura</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TERRENO__ALTURA = eINSTANCE.getTerreno_Altura();
+
+		/**
+		 * The meta object literal for the '<em><b>Temperatura</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TERRENO__TEMPERATURA = eINSTANCE.getTerreno_Temperatura();
+
+		/**
+		 * The meta object literal for the '<em><b>Longitud</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TERRENO__LONGITUD = eINSTANCE.getTerreno_Longitud();
+
+		/**
+		 * The meta object literal for the '<em><b>Latitud</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TERRENO__LATITUD = eINSTANCE.getTerreno_Latitud();
 
 		/**
 		 * The meta object literal for the '{@link CoffeeModeling.TipoDefectos <em>Tipo Defectos</em>}' enum.

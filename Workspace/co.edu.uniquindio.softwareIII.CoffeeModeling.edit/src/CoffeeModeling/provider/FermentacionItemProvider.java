@@ -64,6 +64,7 @@ public class FermentacionItemProvider
 			addTemperaturaPropertyDescriptor(object);
 			addHoraSolPropertyDescriptor(object);
 			addHoraSombraPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -157,6 +158,28 @@ public class FermentacionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Fermentacion_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Fermentacion_id_feature", "_UI_Fermentacion_type"),
+				 CoffeeModelingPackage.Literals.FERMENTACION__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Fermentacion.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,8 +198,10 @@ public class FermentacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Fermentacion fermentacion = (Fermentacion)object;
-		return getString("_UI_Fermentacion_type") + " " + fermentacion.getAltitud();
+		String label = ((Fermentacion)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Fermentacion_type") :
+			getString("_UI_Fermentacion_type") + " " + label;
 	}
 	
 
@@ -196,6 +221,7 @@ public class FermentacionItemProvider
 			case CoffeeModelingPackage.FERMENTACION__TEMPERATURA:
 			case CoffeeModelingPackage.FERMENTACION__HORA_SOL:
 			case CoffeeModelingPackage.FERMENTACION__HORA_SOMBRA:
+			case CoffeeModelingPackage.FERMENTACION__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link CoffeeModeling.impl.SeleccionImpl#getDiasAlmacenamiento <em>Dias Almacenamiento</em>}</li>
  *   <li>{@link CoffeeModeling.impl.SeleccionImpl#getDefecto <em>Defecto</em>}</li>
  *   <li>{@link CoffeeModeling.impl.SeleccionImpl#getSeleccionautomatica <em>Seleccionautomatica</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.SeleccionImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +100,26 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 	 * @ordered
 	 */
 	protected EList<SeleccionAutomatica> seleccionautomatica;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,6 +211,27 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.SELECCION__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -217,6 +259,8 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 				return getDefecto();
 			case CoffeeModelingPackage.SELECCION__SELECCIONAUTOMATICA:
 				return getSeleccionautomatica();
+			case CoffeeModelingPackage.SELECCION__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,6 +288,9 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 				getSeleccionautomatica().clear();
 				getSeleccionautomatica().addAll((Collection<? extends SeleccionAutomatica>)newValue);
 				return;
+			case CoffeeModelingPackage.SELECCION__ID:
+				setId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -268,6 +315,9 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 			case CoffeeModelingPackage.SELECCION__SELECCIONAUTOMATICA:
 				getSeleccionautomatica().clear();
 				return;
+			case CoffeeModelingPackage.SELECCION__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,6 +338,8 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 				return defecto != null && !defecto.isEmpty();
 			case CoffeeModelingPackage.SELECCION__SELECCIONAUTOMATICA:
 				return seleccionautomatica != null && !seleccionautomatica.isEmpty();
+			case CoffeeModelingPackage.SELECCION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -306,6 +358,8 @@ public class SeleccionImpl extends MinimalEObjectImpl.Container implements Selec
 		result.append(metodo);
 		result.append(", diasAlmacenamiento: ");
 		result.append(diasAlmacenamiento);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

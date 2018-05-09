@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: CoffeeModeling.tests
 Require-Bundle: org.eclipse.core.runtime,
  co.edu.uniquindio.softwareIII.CoffeeModeling;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport
+ org.junit;visibility:=reexport,
+ co.edu.uniquindio.softwareIII.CoffeeModeling.application;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

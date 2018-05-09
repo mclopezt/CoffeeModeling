@@ -102,7 +102,8 @@ public class FincaItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CoffeeModelingPackage.Literals.FINCA__LOTES);
+			childrenFeatures.add(CoffeeModelingPackage.Literals.FINCA__TERRENO);
+			childrenFeatures.add(CoffeeModelingPackage.Literals.FINCA__EMPLEADO);
 		}
 		return childrenFeatures;
 	}
@@ -161,7 +162,8 @@ public class FincaItemProvider
 			case CoffeeModelingPackage.FINCA__NOMBRE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CoffeeModelingPackage.FINCA__LOTES:
+			case CoffeeModelingPackage.FINCA__TERRENO:
+			case CoffeeModelingPackage.FINCA__EMPLEADO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,8 +183,13 @@ public class FincaItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CoffeeModelingPackage.Literals.FINCA__LOTES,
-				 CoffeeModelingFactory.eINSTANCE.createLote()));
+				(CoffeeModelingPackage.Literals.FINCA__TERRENO,
+				 CoffeeModelingFactory.eINSTANCE.createTerreno()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CoffeeModelingPackage.Literals.FINCA__EMPLEADO,
+				 CoffeeModelingFactory.eINSTANCE.createEmpleado()));
 	}
 
 	/**

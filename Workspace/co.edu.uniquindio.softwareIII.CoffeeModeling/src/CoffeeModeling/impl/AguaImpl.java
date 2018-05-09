@@ -5,10 +5,12 @@ package CoffeeModeling.impl;
 import CoffeeModeling.Agua;
 import CoffeeModeling.CoffeeModelingPackage;
 
+import CoffeeModeling.Lote;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link CoffeeModeling.impl.AguaImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link CoffeeModeling.impl.AguaImpl#getCantidad <em>Cantidad</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.AguaImpl#getLoteRelacionado <em>Lote Relacionado</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +69,16 @@ public class AguaImpl extends MinimalEObjectImpl.Container implements Agua {
 	 * @ordered
 	 */
 	protected float cantidad = CANTIDAD_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLoteRelacionado() <em>Lote Relacionado</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLoteRelacionado()
+	 * @generated
+	 * @ordered
+	 */
+	protected Lote loteRelacionado;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +146,44 @@ public class AguaImpl extends MinimalEObjectImpl.Container implements Agua {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Lote getLoteRelacionado() {
+		if (loteRelacionado != null && loteRelacionado.eIsProxy()) {
+			InternalEObject oldLoteRelacionado = (InternalEObject)loteRelacionado;
+			loteRelacionado = (Lote)eResolveProxy(oldLoteRelacionado);
+			if (loteRelacionado != oldLoteRelacionado) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CoffeeModelingPackage.AGUA__LOTE_RELACIONADO, oldLoteRelacionado, loteRelacionado));
+			}
+		}
+		return loteRelacionado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Lote basicGetLoteRelacionado() {
+		return loteRelacionado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLoteRelacionado(Lote newLoteRelacionado) {
+		Lote oldLoteRelacionado = loteRelacionado;
+		loteRelacionado = newLoteRelacionado;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.AGUA__LOTE_RELACIONADO, oldLoteRelacionado, loteRelacionado));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -140,6 +191,9 @@ public class AguaImpl extends MinimalEObjectImpl.Container implements Agua {
 				return getTipo();
 			case CoffeeModelingPackage.AGUA__CANTIDAD:
 				return getCantidad();
+			case CoffeeModelingPackage.AGUA__LOTE_RELACIONADO:
+				if (resolve) return getLoteRelacionado();
+				return basicGetLoteRelacionado();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +211,9 @@ public class AguaImpl extends MinimalEObjectImpl.Container implements Agua {
 				return;
 			case CoffeeModelingPackage.AGUA__CANTIDAD:
 				setCantidad((Float)newValue);
+				return;
+			case CoffeeModelingPackage.AGUA__LOTE_RELACIONADO:
+				setLoteRelacionado((Lote)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,6 +233,9 @@ public class AguaImpl extends MinimalEObjectImpl.Container implements Agua {
 			case CoffeeModelingPackage.AGUA__CANTIDAD:
 				setCantidad(CANTIDAD_EDEFAULT);
 				return;
+			case CoffeeModelingPackage.AGUA__LOTE_RELACIONADO:
+				setLoteRelacionado((Lote)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,6 +252,8 @@ public class AguaImpl extends MinimalEObjectImpl.Container implements Agua {
 				return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
 			case CoffeeModelingPackage.AGUA__CANTIDAD:
 				return cantidad != CANTIDAD_EDEFAULT;
+			case CoffeeModelingPackage.AGUA__LOTE_RELACIONADO:
+				return loteRelacionado != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -65,6 +65,7 @@ public class SeleccionItemProvider
 
 			addMetodoPropertyDescriptor(object);
 			addDiasAlmacenamientoPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,6 +110,28 @@ public class SeleccionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Seleccion_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Seleccion_id_feature", "_UI_Seleccion_type"),
+				 CoffeeModelingPackage.Literals.SELECCION__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -163,7 +186,7 @@ public class SeleccionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Seleccion)object).getMetodo();
+		String label = ((Seleccion)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Seleccion_type") :
 			getString("_UI_Seleccion_type") + " " + label;
@@ -184,6 +207,7 @@ public class SeleccionItemProvider
 		switch (notification.getFeatureID(Seleccion.class)) {
 			case CoffeeModelingPackage.SELECCION__METODO:
 			case CoffeeModelingPackage.SELECCION__DIAS_ALMACENAMIENTO:
+			case CoffeeModelingPackage.SELECCION__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CoffeeModelingPackage.SELECCION__DEFECTO:

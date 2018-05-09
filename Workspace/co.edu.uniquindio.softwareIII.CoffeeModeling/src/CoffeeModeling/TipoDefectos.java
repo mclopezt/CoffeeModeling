@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TipoDefectos implements Enumerator {
 	/**
-	 * The '<em><b>Ninguno</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NINGUNO_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NINGUNO(0, "Ninguno", "Ninguno"),
-
-	/**
 	 * The '<em><b>Veteado</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,21 +137,6 @@ public enum TipoDefectos implements Enumerator {
 	 * @ordered
 	 */
 	NEGRO(12, "Negro", "Negro");
-
-	/**
-	 * The '<em><b>Ninguno</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Ninguno</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #NINGUNO
-	 * @model name="Ninguno"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NINGUNO_VALUE = 0;
 
 	/**
 	 * The '<em><b>Veteado</b></em>' literal value.
@@ -351,7 +326,6 @@ public enum TipoDefectos implements Enumerator {
 	 */
 	private static final TipoDefectos[] VALUES_ARRAY =
 		new TipoDefectos[] {
-			NINGUNO,
 			VETEADO,
 			REPOSADO,
 			AMBAR,
@@ -420,7 +394,6 @@ public enum TipoDefectos implements Enumerator {
 	 */
 	public static TipoDefectos get(int value) {
 		switch (value) {
-			case NINGUNO_VALUE: return NINGUNO;
 			case VETEADO_VALUE: return VETEADO;
 			case REPOSADO_VALUE: return REPOSADO;
 			case AMBAR_VALUE: return AMBAR;

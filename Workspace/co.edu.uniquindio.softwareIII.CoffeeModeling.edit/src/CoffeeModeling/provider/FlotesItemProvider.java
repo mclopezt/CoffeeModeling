@@ -64,6 +64,7 @@ public class FlotesItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCantGranoDefectuosoPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +87,28 @@ public class FlotesItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Flotes_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Flotes_id_feature", "_UI_Flotes_type"),
+				 CoffeeModelingPackage.Literals.FLOTES__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -139,8 +162,10 @@ public class FlotesItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Flotes flotes = (Flotes)object;
-		return getString("_UI_Flotes_type") + " " + flotes.getCantGranoDefectuoso();
+		String label = ((Flotes)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Flotes_type") :
+			getString("_UI_Flotes_type") + " " + label;
 	}
 	
 
@@ -157,6 +182,7 @@ public class FlotesItemProvider
 
 		switch (notification.getFeatureID(Flotes.class)) {
 			case CoffeeModelingPackage.FLOTES__CANT_GRANO_DEFECTUOSO:
+			case CoffeeModelingPackage.FLOTES__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CoffeeModelingPackage.FLOTES__AGUA_USADA:

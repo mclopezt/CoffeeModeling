@@ -62,6 +62,7 @@ public class MoliendaItemProvider
 
 			addRefMaquinariaPropertyDescriptor(object);
 			addFechaUltimoMantenimientoPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,6 +112,28 @@ public class MoliendaItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Molienda_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Molienda_id_feature", "_UI_Molienda_type"),
+				 CoffeeModelingPackage.Literals.MOLIENDA__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Molienda.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +152,7 @@ public class MoliendaItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Molienda)object).getRefMaquinaria();
+		String label = ((Molienda)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Molienda_type") :
 			getString("_UI_Molienda_type") + " " + label;
@@ -150,6 +173,7 @@ public class MoliendaItemProvider
 		switch (notification.getFeatureID(Molienda.class)) {
 			case CoffeeModelingPackage.MOLIENDA__REF_MAQUINARIA:
 			case CoffeeModelingPackage.MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO:
+			case CoffeeModelingPackage.MOLIENDA__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

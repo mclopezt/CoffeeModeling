@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link CoffeeModeling.Veneno#getNombre <em>Nombre</em>}</li>
  *   <li>{@link CoffeeModeling.Veneno#getFechaAplicado <em>Fecha Aplicado</em>}</li>
+ *   <li>{@link CoffeeModeling.Veneno#getLoteRelacionado <em>Lote Relacionado</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getVeneno()
@@ -73,5 +74,31 @@ public interface Veneno extends EObject {
 	 * @generated
 	 */
 	void setFechaAplicado(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lote Relacionado</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lote Relacionado</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lote Relacionado</em>' reference.
+	 * @see #setLoteRelacionado(Lote)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getVeneno_LoteRelacionado()
+	 * @model
+	 * @generated
+	 */
+	Lote getLoteRelacionado();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Veneno#getLoteRelacionado <em>Lote Relacionado</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lote Relacionado</em>' reference.
+	 * @see #getLoteRelacionado()
+	 * @generated
+	 */
+	void setLoteRelacionado(Lote value);
 
 } // Veneno

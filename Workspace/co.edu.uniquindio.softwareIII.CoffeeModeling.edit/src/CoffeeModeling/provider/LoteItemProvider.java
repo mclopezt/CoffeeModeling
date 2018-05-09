@@ -64,10 +64,9 @@ public class LoteItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIdPropertyDescriptor(object);
-			addLatitudPropertyDescriptor(object);
-			addLongitudPropertyDescriptor(object);
-			addAlturaPropertyDescriptor(object);
-			addTemperaturaPropertyDescriptor(object);
+			addFechaInicioPropertyDescriptor(object);
+			addFechaFinPropertyDescriptor(object);
+			addEmpleadosPropertyDescriptor(object);
 			addPesoPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -96,89 +95,67 @@ public class LoteItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Latitud feature.
+	 * This adds a property descriptor for the Fecha Inicio feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLatitudPropertyDescriptor(Object object) {
+	protected void addFechaInicioPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Lote_latitud_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_latitud_feature", "_UI_Lote_type"),
-				 CoffeeModelingPackage.Literals.LOTE__LATITUD,
+				 getString("_UI_Lote_fechaInicio_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_fechaInicio_feature", "_UI_Lote_type"),
+				 CoffeeModelingPackage.Literals.LOTE__FECHA_INICIO,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Longitud feature.
+	 * This adds a property descriptor for the Fecha Fin feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLongitudPropertyDescriptor(Object object) {
+	protected void addFechaFinPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Lote_longitud_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_longitud_feature", "_UI_Lote_type"),
-				 CoffeeModelingPackage.Literals.LOTE__LONGITUD,
+				 getString("_UI_Lote_fechaFin_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_fechaFin_feature", "_UI_Lote_type"),
+				 CoffeeModelingPackage.Literals.LOTE__FECHA_FIN,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Altura feature.
+	 * This adds a property descriptor for the Empleados feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAlturaPropertyDescriptor(Object object) {
+	protected void addEmpleadosPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Lote_altura_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_altura_feature", "_UI_Lote_type"),
-				 CoffeeModelingPackage.Literals.LOTE__ALTURA,
+				 getString("_UI_Lote_empleados_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_empleados_feature", "_UI_Lote_type"),
+				 CoffeeModelingPackage.Literals.LOTE__EMPLEADOS,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 true,
 				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Temperatura feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTemperaturaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Lote_temperatura_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Lote_temperatura_feature", "_UI_Lote_type"),
-				 CoffeeModelingPackage.Literals.LOTE__TEMPERATURA,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -217,7 +194,6 @@ public class LoteItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__SIEMBRA);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__RECOLECCION);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__FLOTES);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__DESPULPE);
@@ -229,7 +205,6 @@ public class LoteItemProvider
 			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__TOSTION);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__MOLIENDA);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__EMPAQUE);
-			childrenFeatures.add(CoffeeModelingPackage.Literals.LOTE__EMPLEADO);
 		}
 		return childrenFeatures;
 	}
@@ -286,14 +261,11 @@ public class LoteItemProvider
 
 		switch (notification.getFeatureID(Lote.class)) {
 			case CoffeeModelingPackage.LOTE__ID:
-			case CoffeeModelingPackage.LOTE__LATITUD:
-			case CoffeeModelingPackage.LOTE__LONGITUD:
-			case CoffeeModelingPackage.LOTE__ALTURA:
-			case CoffeeModelingPackage.LOTE__TEMPERATURA:
+			case CoffeeModelingPackage.LOTE__FECHA_INICIO:
+			case CoffeeModelingPackage.LOTE__FECHA_FIN:
 			case CoffeeModelingPackage.LOTE__PESO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CoffeeModelingPackage.LOTE__SIEMBRA:
 			case CoffeeModelingPackage.LOTE__RECOLECCION:
 			case CoffeeModelingPackage.LOTE__FLOTES:
 			case CoffeeModelingPackage.LOTE__DESPULPE:
@@ -305,7 +277,6 @@ public class LoteItemProvider
 			case CoffeeModelingPackage.LOTE__TOSTION:
 			case CoffeeModelingPackage.LOTE__MOLIENDA:
 			case CoffeeModelingPackage.LOTE__EMPAQUE:
-			case CoffeeModelingPackage.LOTE__EMPLEADO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -322,11 +293,6 @@ public class LoteItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CoffeeModelingPackage.Literals.LOTE__SIEMBRA,
-				 CoffeeModelingFactory.eINSTANCE.createSiembra()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -382,11 +348,6 @@ public class LoteItemProvider
 			(createChildParameter
 				(CoffeeModelingPackage.Literals.LOTE__EMPAQUE,
 				 CoffeeModelingFactory.eINSTANCE.createEmpaque()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CoffeeModelingPackage.Literals.LOTE__EMPLEADO,
-				 CoffeeModelingFactory.eINSTANCE.createEmpleado()));
 	}
 
 	/**

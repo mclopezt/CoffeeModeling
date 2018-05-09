@@ -23,6 +23,7 @@ import CoffeeModeling.Secado;
 import CoffeeModeling.Seleccion;
 import CoffeeModeling.SeleccionAutomatica;
 import CoffeeModeling.Siembra;
+import CoffeeModeling.Terreno;
 import CoffeeModeling.TipoDefectos;
 import CoffeeModeling.Tostion;
 import CoffeeModeling.Trilla;
@@ -195,6 +196,13 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass terrenoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum tipoDefectosEEnum = null;
 
 	/**
@@ -288,8 +296,17 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFinca_Lotes() {
+	public EReference getFinca_Terreno() {
 		return (EReference)fincaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFinca_Empleado() {
+		return (EReference)fincaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -315,62 +332,8 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLote_Latitud() {
-		return (EAttribute)loteEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLote_Longitud() {
-		return (EAttribute)loteEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLote_Altura() {
-		return (EAttribute)loteEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLote_Temperatura() {
-		return (EAttribute)loteEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLote_Peso() {
-		return (EAttribute)loteEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLote_Siembra() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getLote_Recoleccion() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(7);
+		return (EReference)loteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -379,7 +342,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Flotes() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(8);
+		return (EReference)loteEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -388,7 +351,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Despulpe() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(9);
+		return (EReference)loteEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -397,7 +360,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Fermentacion() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(10);
+		return (EReference)loteEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -406,7 +369,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Lavado() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(11);
+		return (EReference)loteEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -415,7 +378,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Secado() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(12);
+		return (EReference)loteEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -424,7 +387,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Trilla() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(13);
+		return (EReference)loteEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -433,7 +396,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Seleccion() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(14);
+		return (EReference)loteEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -442,7 +405,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Tostion() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(15);
+		return (EReference)loteEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -451,7 +414,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Molienda() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(16);
+		return (EReference)loteEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -460,7 +423,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * @generated
 	 */
 	public EReference getLote_Empaque() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(17);
+		return (EReference)loteEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -468,8 +431,35 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLote_Empleado() {
-		return (EReference)loteEClass.getEStructuralFeatures().get(18);
+	public EAttribute getLote_FechaInicio() {
+		return (EAttribute)loteEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLote_FechaFin() {
+		return (EAttribute)loteEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLote_Empleados() {
+		return (EReference)loteEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLote_Peso() {
+		return (EAttribute)loteEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -540,6 +530,24 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSiembra_Id() {
+		return (EAttribute)siembraEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSiembra_Lotes() {
+		return (EReference)siembraEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbono() {
 		return abonoEClass;
 	}
@@ -560,6 +568,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EAttribute getAbono_FechaAplicado() {
 		return (EAttribute)abonoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbono_LoteRelacionado() {
+		return (EReference)abonoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -594,6 +611,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVeneno_LoteRelacionado() {
+		return (EReference)venenoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRecoleccion() {
 		return recoleccionEClass;
 	}
@@ -605,6 +631,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EAttribute getRecoleccion_Fecha() {
 		return (EAttribute)recoleccionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecoleccion_Id() {
+		return (EAttribute)recoleccionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -639,6 +674,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFlotes_Id() {
+		return (EAttribute)flotesEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDespulpe() {
 		return despulpeEClass;
 	}
@@ -666,6 +710,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDespulpe_Id() {
+		return (EAttribute)despulpeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAgua() {
 		return aguaEClass;
 	}
@@ -686,6 +739,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EAttribute getAgua_Cantidad() {
 		return (EAttribute)aguaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAgua_LoteRelacionado() {
+		return (EReference)aguaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -738,6 +800,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFermentacion_Id() {
+		return (EAttribute)fermentacionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLavado() {
 		return lavadoEClass;
 	}
@@ -758,6 +829,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EReference getLavado_AguaUsada() {
 		return (EReference)lavadoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLavado_Id() {
+		return (EAttribute)lavadoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -819,6 +899,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSecado_Id() {
+		return (EAttribute)secadoEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTrilla() {
 		return trillaEClass;
 	}
@@ -839,6 +928,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EAttribute getTrilla_Malla() {
 		return (EAttribute)trillaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrilla_Id() {
+		return (EAttribute)trillaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -891,6 +989,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSeleccion_Id() {
+		return (EAttribute)seleccionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTostion() {
 		return tostionEClass;
 	}
@@ -929,6 +1036,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EAttribute getTostion_FechaUltimoMantenimiento() {
 		return (EAttribute)tostionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTostion_Id() {
+		return (EAttribute)tostionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1001,6 +1117,15 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 */
 	public EAttribute getMolienda_FechaUltimoMantenimiento() {
 		return (EAttribute)moliendaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMolienda_Id() {
+		return (EAttribute)moliendaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1098,6 +1223,69 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTerreno() {
+		return terrenoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTerreno_Siembra() {
+		return (EReference)terrenoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTerreno_Id() {
+		return (EAttribute)terrenoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTerreno_Altura() {
+		return (EAttribute)terrenoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTerreno_Temperatura() {
+		return (EAttribute)terrenoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTerreno_Longitud() {
+		return (EAttribute)terrenoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTerreno_Latitud() {
+		return (EAttribute)terrenoEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTipoDefectos() {
 		return tipoDefectosEEnum;
 	}
@@ -1141,16 +1329,11 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		// Create classes and their features
 		fincaEClass = createEClass(FINCA);
 		createEAttribute(fincaEClass, FINCA__NOMBRE);
-		createEReference(fincaEClass, FINCA__LOTES);
+		createEReference(fincaEClass, FINCA__TERRENO);
+		createEReference(fincaEClass, FINCA__EMPLEADO);
 
 		loteEClass = createEClass(LOTE);
 		createEAttribute(loteEClass, LOTE__ID);
-		createEAttribute(loteEClass, LOTE__LATITUD);
-		createEAttribute(loteEClass, LOTE__LONGITUD);
-		createEAttribute(loteEClass, LOTE__ALTURA);
-		createEAttribute(loteEClass, LOTE__TEMPERATURA);
-		createEAttribute(loteEClass, LOTE__PESO);
-		createEReference(loteEClass, LOTE__SIEMBRA);
 		createEReference(loteEClass, LOTE__RECOLECCION);
 		createEReference(loteEClass, LOTE__FLOTES);
 		createEReference(loteEClass, LOTE__DESPULPE);
@@ -1162,7 +1345,10 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		createEReference(loteEClass, LOTE__TOSTION);
 		createEReference(loteEClass, LOTE__MOLIENDA);
 		createEReference(loteEClass, LOTE__EMPAQUE);
-		createEReference(loteEClass, LOTE__EMPLEADO);
+		createEAttribute(loteEClass, LOTE__FECHA_INICIO);
+		createEAttribute(loteEClass, LOTE__FECHA_FIN);
+		createEReference(loteEClass, LOTE__EMPLEADOS);
+		createEAttribute(loteEClass, LOTE__PESO);
 
 		siembraEClass = createEClass(SIEMBRA);
 		createEAttribute(siembraEClass, SIEMBRA__EDAD_CULTIVO);
@@ -1171,39 +1357,49 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		createEReference(siembraEClass, SIEMBRA__ABONO);
 		createEReference(siembraEClass, SIEMBRA__VENENO);
 		createEReference(siembraEClass, SIEMBRA__AGUA_RIEGO);
+		createEAttribute(siembraEClass, SIEMBRA__ID);
+		createEReference(siembraEClass, SIEMBRA__LOTES);
 
 		abonoEClass = createEClass(ABONO);
 		createEAttribute(abonoEClass, ABONO__NOMBRE);
 		createEAttribute(abonoEClass, ABONO__FECHA_APLICADO);
+		createEReference(abonoEClass, ABONO__LOTE_RELACIONADO);
 
 		venenoEClass = createEClass(VENENO);
 		createEAttribute(venenoEClass, VENENO__NOMBRE);
 		createEAttribute(venenoEClass, VENENO__FECHA_APLICADO);
+		createEReference(venenoEClass, VENENO__LOTE_RELACIONADO);
 
 		recoleccionEClass = createEClass(RECOLECCION);
 		createEAttribute(recoleccionEClass, RECOLECCION__FECHA);
+		createEAttribute(recoleccionEClass, RECOLECCION__ID);
 
 		flotesEClass = createEClass(FLOTES);
 		createEAttribute(flotesEClass, FLOTES__CANT_GRANO_DEFECTUOSO);
 		createEReference(flotesEClass, FLOTES__AGUA_USADA);
+		createEAttribute(flotesEClass, FLOTES__ID);
 
 		despulpeEClass = createEClass(DESPULPE);
 		createEAttribute(despulpeEClass, DESPULPE__REF_MAQUINARIA);
 		createEAttribute(despulpeEClass, DESPULPE__FECHA_ULTIMO_MANTENIMIENTO);
+		createEAttribute(despulpeEClass, DESPULPE__ID);
 
 		aguaEClass = createEClass(AGUA);
 		createEAttribute(aguaEClass, AGUA__TIPO);
 		createEAttribute(aguaEClass, AGUA__CANTIDAD);
+		createEReference(aguaEClass, AGUA__LOTE_RELACIONADO);
 
 		fermentacionEClass = createEClass(FERMENTACION);
 		createEAttribute(fermentacionEClass, FERMENTACION__ALTITUD);
 		createEAttribute(fermentacionEClass, FERMENTACION__TEMPERATURA);
 		createEAttribute(fermentacionEClass, FERMENTACION__HORA_SOL);
 		createEAttribute(fermentacionEClass, FERMENTACION__HORA_SOMBRA);
+		createEAttribute(fermentacionEClass, FERMENTACION__ID);
 
 		lavadoEClass = createEClass(LAVADO);
 		createEAttribute(lavadoEClass, LAVADO__TECNICA);
 		createEReference(lavadoEClass, LAVADO__AGUA_USADA);
+		createEAttribute(lavadoEClass, LAVADO__ID);
 
 		secadoEClass = createEClass(SECADO);
 		createEAttribute(secadoEClass, SECADO__TIPO);
@@ -1211,22 +1407,26 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		createEAttribute(secadoEClass, SECADO__HORA_SOMBRA);
 		createEAttribute(secadoEClass, SECADO__HORA_ALMACENAMIENTO);
 		createEAttribute(secadoEClass, SECADO__HUMEDAD);
+		createEAttribute(secadoEClass, SECADO__ID);
 
 		trillaEClass = createEClass(TRILLA);
 		createEAttribute(trillaEClass, TRILLA__TECNICA_EMPLEADA);
 		createEAttribute(trillaEClass, TRILLA__MALLA);
+		createEAttribute(trillaEClass, TRILLA__ID);
 
 		seleccionEClass = createEClass(SELECCION);
 		createEAttribute(seleccionEClass, SELECCION__METODO);
 		createEAttribute(seleccionEClass, SELECCION__DIAS_ALMACENAMIENTO);
 		createEReference(seleccionEClass, SELECCION__DEFECTO);
 		createEReference(seleccionEClass, SELECCION__SELECCIONAUTOMATICA);
+		createEAttribute(seleccionEClass, SELECCION__ID);
 
 		tostionEClass = createEClass(TOSTION);
 		createEAttribute(tostionEClass, TOSTION__HORAS);
 		createEAttribute(tostionEClass, TOSTION__TEMPERATURA);
 		createEAttribute(tostionEClass, TOSTION__REF_MAQUINARIA);
 		createEAttribute(tostionEClass, TOSTION__FECHA_ULTIMO_MANTENIMIENTO);
+		createEAttribute(tostionEClass, TOSTION__ID);
 
 		defectoEClass = createEClass(DEFECTO);
 		createEAttribute(defectoEClass, DEFECTO__TIPO);
@@ -1238,6 +1438,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		moliendaEClass = createEClass(MOLIENDA);
 		createEAttribute(moliendaEClass, MOLIENDA__REF_MAQUINARIA);
 		createEAttribute(moliendaEClass, MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO);
+		createEAttribute(moliendaEClass, MOLIENDA__ID);
 
 		empaqueEClass = createEClass(EMPAQUE);
 		createEAttribute(empaqueEClass, EMPAQUE__TIPO);
@@ -1251,6 +1452,14 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 
 		procesoEClass = createEClass(PROCESO);
 		createEAttribute(procesoEClass, PROCESO__NOMBRE_PROCESO);
+
+		terrenoEClass = createEClass(TERRENO);
+		createEReference(terrenoEClass, TERRENO__SIEMBRA);
+		createEAttribute(terrenoEClass, TERRENO__ID);
+		createEAttribute(terrenoEClass, TERRENO__ALTURA);
+		createEAttribute(terrenoEClass, TERRENO__TEMPERATURA);
+		createEAttribute(terrenoEClass, TERRENO__LONGITUD);
+		createEAttribute(terrenoEClass, TERRENO__LATITUD);
 
 		// Create enums
 		tipoDefectosEEnum = createEEnum(TIPO_DEFECTOS);
@@ -1289,28 +1498,26 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fincaEClass, Finca.class, "Finca", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFinca_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Finca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFinca_Lotes(), this.getLote(), null, "lotes", null, 0, -1, Finca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFinca_Terreno(), this.getTerreno(), null, "terreno", null, 0, -1, Finca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFinca_Empleado(), this.getEmpleado(), null, "empleado", null, 0, -1, Finca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loteEClass, Lote.class, "Lote", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLote_Id(), ecorePackage.getEString(), "id", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLote_Latitud(), ecorePackage.getEFloat(), "latitud", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLote_Longitud(), ecorePackage.getEFloat(), "longitud", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLote_Altura(), ecorePackage.getEFloat(), "altura", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLote_Temperatura(), ecorePackage.getEFloat(), "temperatura", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Recoleccion(), this.getRecoleccion(), null, "recoleccion", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Flotes(), this.getFlotes(), null, "flotes", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Despulpe(), this.getDespulpe(), null, "despulpe", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Fermentacion(), this.getFermentacion(), null, "fermentacion", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Lavado(), this.getLavado(), null, "lavado", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Secado(), this.getSecado(), null, "secado", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Trilla(), this.getTrilla(), null, "trilla", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Seleccion(), this.getSeleccion(), null, "seleccion", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Tostion(), this.getTostion(), null, "tostion", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Molienda(), this.getMolienda(), null, "molienda", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Empaque(), this.getEmpaque(), null, "empaque", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLote_FechaInicio(), ecorePackage.getEString(), "fechaInicio", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLote_FechaFin(), ecorePackage.getEString(), "fechaFin", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLote_Empleados(), this.getEmpleado(), null, "empleados", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLote_Peso(), ecorePackage.getEInt(), "peso", null, 0, 1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Siembra(), this.getSiembra(), null, "siembra", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Recoleccion(), this.getRecoleccion(), null, "recoleccion", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Flotes(), this.getFlotes(), null, "flotes", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Despulpe(), this.getDespulpe(), null, "despulpe", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Fermentacion(), this.getFermentacion(), null, "fermentacion", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Lavado(), this.getLavado(), null, "lavado", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Secado(), this.getSecado(), null, "secado", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Trilla(), this.getTrilla(), null, "trilla", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Seleccion(), this.getSeleccion(), null, "seleccion", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Tostion(), this.getTostion(), null, "tostion", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Molienda(), this.getMolienda(), null, "molienda", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Empaque(), this.getEmpaque(), null, "empaque", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLote_Empleado(), this.getEmpleado(), null, "empleado", null, 0, -1, Lote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(siembraEClass, Siembra.class, "Siembra", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSiembra_EdadCultivo(), ecorePackage.getEInt(), "edadCultivo", null, 0, 1, Siembra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1319,39 +1526,49 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		initEReference(getSiembra_Abono(), this.getAbono(), null, "abono", null, 0, -1, Siembra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSiembra_Veneno(), this.getVeneno(), null, "veneno", null, 0, -1, Siembra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSiembra_AguaRiego(), this.getAgua(), null, "aguaRiego", null, 0, -1, Siembra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSiembra_Id(), ecorePackage.getEString(), "id", null, 0, 1, Siembra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSiembra_Lotes(), this.getLote(), null, "lotes", null, 0, -1, Siembra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abonoEClass, Abono.class, "Abono", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbono_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Abono.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbono_FechaAplicado(), ecorePackage.getEString(), "fechaAplicado", null, 0, 1, Abono.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbono_LoteRelacionado(), this.getLote(), null, "loteRelacionado", null, 0, 1, Abono.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(venenoEClass, Veneno.class, "Veneno", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVeneno_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Veneno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVeneno_FechaAplicado(), ecorePackage.getEString(), "fechaAplicado", null, 0, 1, Veneno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVeneno_LoteRelacionado(), this.getLote(), null, "loteRelacionado", null, 0, 1, Veneno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recoleccionEClass, Recoleccion.class, "Recoleccion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRecoleccion_Fecha(), ecorePackage.getEString(), "fecha", null, 0, 1, Recoleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecoleccion_Id(), ecorePackage.getEString(), "id", null, 0, 1, Recoleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(flotesEClass, Flotes.class, "Flotes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFlotes_CantGranoDefectuoso(), ecorePackage.getEInt(), "cantGranoDefectuoso", null, 0, 1, Flotes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFlotes_AguaUsada(), this.getAgua(), null, "aguaUsada", null, 0, -1, Flotes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFlotes_Id(), ecorePackage.getEString(), "id", null, 0, 1, Flotes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(despulpeEClass, Despulpe.class, "Despulpe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDespulpe_RefMaquinaria(), ecorePackage.getEString(), "refMaquinaria", null, 0, 1, Despulpe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDespulpe_FechaUltimoMantenimiento(), ecorePackage.getEString(), "fechaUltimoMantenimiento", null, 0, 1, Despulpe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDespulpe_Id(), ecorePackage.getEString(), "id", null, 0, 1, Despulpe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aguaEClass, Agua.class, "Agua", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAgua_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, Agua.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAgua_Cantidad(), ecorePackage.getEFloat(), "cantidad", null, 0, 1, Agua.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAgua_LoteRelacionado(), this.getLote(), null, "loteRelacionado", null, 0, 1, Agua.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fermentacionEClass, Fermentacion.class, "Fermentacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFermentacion_Altitud(), ecorePackage.getEFloat(), "altitud", null, 0, 1, Fermentacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFermentacion_Temperatura(), ecorePackage.getEFloat(), "temperatura", null, 0, 1, Fermentacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFermentacion_HoraSol(), ecorePackage.getEString(), "horaSol", null, 0, 1, Fermentacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFermentacion_HoraSombra(), ecorePackage.getEString(), "horaSombra", null, 0, 1, Fermentacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFermentacion_Id(), ecorePackage.getEString(), "id", null, 0, 1, Fermentacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lavadoEClass, Lavado.class, "Lavado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLavado_Tecnica(), ecorePackage.getEString(), "tecnica", null, 0, 1, Lavado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLavado_AguaUsada(), this.getAgua(), null, "aguaUsada", null, 0, -1, Lavado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLavado_Id(), ecorePackage.getEString(), "id", null, 0, 1, Lavado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(secadoEClass, Secado.class, "Secado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSecado_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, Secado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1359,22 +1576,26 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		initEAttribute(getSecado_HoraSombra(), ecorePackage.getEString(), "horaSombra", null, 0, 1, Secado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecado_HoraAlmacenamiento(), ecorePackage.getEString(), "horaAlmacenamiento", null, 0, 1, Secado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecado_Humedad(), ecorePackage.getEFloat(), "humedad", null, 0, 1, Secado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSecado_Id(), ecorePackage.getEString(), "id", null, 0, 1, Secado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trillaEClass, Trilla.class, "Trilla", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrilla_TecnicaEmpleada(), ecorePackage.getEString(), "tecnicaEmpleada", null, 0, 1, Trilla.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrilla_Malla(), ecorePackage.getEInt(), "malla", null, 0, 1, Trilla.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrilla_Id(), ecorePackage.getEString(), "id", null, 0, 1, Trilla.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(seleccionEClass, Seleccion.class, "Seleccion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSeleccion_Metodo(), ecorePackage.getEString(), "metodo", null, 0, 1, Seleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeleccion_DiasAlmacenamiento(), ecorePackage.getEInt(), "diasAlmacenamiento", null, 0, 1, Seleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeleccion_Defecto(), this.getDefecto(), null, "defecto", null, 0, -1, Seleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeleccion_Seleccionautomatica(), this.getSeleccionAutomatica(), null, "seleccionautomatica", null, 0, -1, Seleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeleccion_Id(), ecorePackage.getEString(), "id", null, 0, 1, Seleccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tostionEClass, Tostion.class, "Tostion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTostion_Horas(), ecorePackage.getEString(), "horas", null, 0, 1, Tostion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTostion_Temperatura(), ecorePackage.getEFloat(), "temperatura", null, 0, 1, Tostion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTostion_RefMaquinaria(), ecorePackage.getEString(), "refMaquinaria", null, 0, 1, Tostion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTostion_FechaUltimoMantenimiento(), ecorePackage.getEString(), "fechaUltimoMantenimiento", null, 0, 1, Tostion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTostion_Id(), ecorePackage.getEString(), "id", null, 0, 1, Tostion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(defectoEClass, Defecto.class, "Defecto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDefecto_Tipo(), this.getTipoDefectos(), "tipo", null, 0, 1, Defecto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1386,6 +1607,7 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		initEClass(moliendaEClass, Molienda.class, "Molienda", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMolienda_RefMaquinaria(), ecorePackage.getEString(), "refMaquinaria", null, 0, 1, Molienda.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMolienda_FechaUltimoMantenimiento(), ecorePackage.getEString(), "fechaUltimoMantenimiento", null, 0, 1, Molienda.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMolienda_Id(), ecorePackage.getEString(), "id", null, 0, 1, Molienda.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(empaqueEClass, Empaque.class, "Empaque", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEmpaque_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, Empaque.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1400,9 +1622,16 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 		initEClass(procesoEClass, Proceso.class, "Proceso", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProceso_NombreProceso(), this.getProcesos(), "nombreProceso", null, 0, 1, Proceso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(terrenoEClass, Terreno.class, "Terreno", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTerreno_Siembra(), this.getSiembra(), null, "siembra", null, 0, -1, Terreno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerreno_Id(), ecorePackage.getEString(), "id", null, 0, 1, Terreno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerreno_Altura(), ecorePackage.getEFloat(), "altura", null, 0, 1, Terreno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerreno_Temperatura(), ecorePackage.getEFloat(), "temperatura", null, 0, 1, Terreno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerreno_Longitud(), ecorePackage.getEFloat(), "longitud", null, 0, 1, Terreno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerreno_Latitud(), ecorePackage.getEFloat(), "latitud", null, 0, 1, Terreno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(tipoDefectosEEnum, TipoDefectos.class, "TipoDefectos");
-		addEEnumLiteral(tipoDefectosEEnum, TipoDefectos.NINGUNO);
 		addEEnumLiteral(tipoDefectosEEnum, TipoDefectos.VETEADO);
 		addEEnumLiteral(tipoDefectosEEnum, TipoDefectos.REPOSADO);
 		addEEnumLiteral(tipoDefectosEEnum, TipoDefectos.AMBAR);
@@ -1429,6 +1658,27 @@ public class CoffeeModelingPackageImpl extends EPackageImpl implements CoffeeMod
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		addAnnotation
+		  (getSecado_Id(), 
+		   source, 
+		   new String[] {
+			 "wildcards", "",
+			 "name", ""
+		   });
 	}
 
 } //CoffeeModelingPackageImpl

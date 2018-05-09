@@ -555,6 +555,29 @@ public class CoffeeModelingItemProviderAdapterFactory extends CoffeeModelingAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link CoffeeModeling.Terreno} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TerrenoItemProvider terrenoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link CoffeeModeling.Terreno}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTerrenoAdapter() {
+		if (terrenoItemProvider == null) {
+			terrenoItemProvider = new TerrenoItemProvider(this);
+		}
+
+		return terrenoItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -674,6 +697,7 @@ public class CoffeeModelingItemProviderAdapterFactory extends CoffeeModelingAdap
 		if (empaqueItemProvider != null) empaqueItemProvider.dispose();
 		if (empleadoItemProvider != null) empleadoItemProvider.dispose();
 		if (procesoItemProvider != null) procesoItemProvider.dispose();
+		if (terrenoItemProvider != null) terrenoItemProvider.dispose();
 	}
 
 }

@@ -64,6 +64,7 @@ public class TostionItemProvider
 			addTemperaturaPropertyDescriptor(object);
 			addRefMaquinariaPropertyDescriptor(object);
 			addFechaUltimoMantenimientoPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -157,6 +158,28 @@ public class TostionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Tostion_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tostion_id_feature", "_UI_Tostion_type"),
+				 CoffeeModelingPackage.Literals.TOSTION__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Tostion.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,7 +198,7 @@ public class TostionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tostion)object).getHoras();
+		String label = ((Tostion)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tostion_type") :
 			getString("_UI_Tostion_type") + " " + label;
@@ -198,6 +221,7 @@ public class TostionItemProvider
 			case CoffeeModelingPackage.TOSTION__TEMPERATURA:
 			case CoffeeModelingPackage.TOSTION__REF_MAQUINARIA:
 			case CoffeeModelingPackage.TOSTION__FECHA_ULTIMO_MANTENIMIENTO:
+			case CoffeeModelingPackage.TOSTION__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

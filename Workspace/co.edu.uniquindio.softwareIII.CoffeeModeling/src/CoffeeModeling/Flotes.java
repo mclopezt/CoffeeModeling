@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link CoffeeModeling.Flotes#getCantGranoDefectuoso <em>Cant Grano Defectuoso</em>}</li>
  *   <li>{@link CoffeeModeling.Flotes#getAguaUsada <em>Agua Usada</em>}</li>
+ *   <li>{@link CoffeeModeling.Flotes#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getFlotes()
@@ -65,5 +66,31 @@ public interface Flotes extends EObject {
 	 * @generated
 	 */
 	EList<Agua> getAguaUsada();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getFlotes_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Flotes#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Flotes

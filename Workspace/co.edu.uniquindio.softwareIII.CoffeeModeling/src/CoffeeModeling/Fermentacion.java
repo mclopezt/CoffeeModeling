@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link CoffeeModeling.Fermentacion#getTemperatura <em>Temperatura</em>}</li>
  *   <li>{@link CoffeeModeling.Fermentacion#getHoraSol <em>Hora Sol</em>}</li>
  *   <li>{@link CoffeeModeling.Fermentacion#getHoraSombra <em>Hora Sombra</em>}</li>
+ *   <li>{@link CoffeeModeling.Fermentacion#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getFermentacion()
@@ -127,5 +128,31 @@ public interface Fermentacion extends EObject {
 	 * @generated
 	 */
 	void setHoraSombra(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getFermentacion_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Fermentacion#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Fermentacion

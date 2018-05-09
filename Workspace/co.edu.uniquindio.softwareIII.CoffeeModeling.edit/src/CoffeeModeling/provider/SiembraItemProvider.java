@@ -66,6 +66,7 @@ public class SiembraItemProvider
 			addEdadCultivoPropertyDescriptor(object);
 			addFechaInicioPropertyDescriptor(object);
 			addVariedadPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -137,6 +138,28 @@ public class SiembraItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Siembra_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Siembra_id_feature", "_UI_Siembra_type"),
+				 CoffeeModelingPackage.Literals.SIEMBRA__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -151,6 +174,7 @@ public class SiembraItemProvider
 			childrenFeatures.add(CoffeeModelingPackage.Literals.SIEMBRA__ABONO);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.SIEMBRA__VENENO);
 			childrenFeatures.add(CoffeeModelingPackage.Literals.SIEMBRA__AGUA_RIEGO);
+			childrenFeatures.add(CoffeeModelingPackage.Literals.SIEMBRA__LOTES);
 		}
 		return childrenFeatures;
 	}
@@ -187,8 +211,10 @@ public class SiembraItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Siembra siembra = (Siembra)object;
-		return getString("_UI_Siembra_type") + " " + siembra.getEdadCultivo();
+		String label = ((Siembra)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Siembra_type") :
+			getString("_UI_Siembra_type") + " " + label;
 	}
 	
 
@@ -207,11 +233,13 @@ public class SiembraItemProvider
 			case CoffeeModelingPackage.SIEMBRA__EDAD_CULTIVO:
 			case CoffeeModelingPackage.SIEMBRA__FECHA_INICIO:
 			case CoffeeModelingPackage.SIEMBRA__VARIEDAD:
+			case CoffeeModelingPackage.SIEMBRA__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CoffeeModelingPackage.SIEMBRA__ABONO:
 			case CoffeeModelingPackage.SIEMBRA__VENENO:
 			case CoffeeModelingPackage.SIEMBRA__AGUA_RIEGO:
+			case CoffeeModelingPackage.SIEMBRA__LOTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -243,6 +271,11 @@ public class SiembraItemProvider
 			(createChildParameter
 				(CoffeeModelingPackage.Literals.SIEMBRA__AGUA_RIEGO,
 				 CoffeeModelingFactory.eINSTANCE.createAgua()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CoffeeModelingPackage.Literals.SIEMBRA__LOTES,
+				 CoffeeModelingFactory.eINSTANCE.createLote()));
 	}
 
 	/**

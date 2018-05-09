@@ -78,6 +78,7 @@ public class CoffeeModelingFactoryImpl extends EFactoryImpl implements CoffeeMod
 			case CoffeeModelingPackage.EMPAQUE: return createEmpaque();
 			case CoffeeModelingPackage.EMPLEADO: return createEmpleado();
 			case CoffeeModelingPackage.PROCESO: return createProceso();
+			case CoffeeModelingPackage.TERRENO: return createTerreno();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -325,6 +326,16 @@ public class CoffeeModelingFactoryImpl extends EFactoryImpl implements CoffeeMod
 	public Proceso createProceso() {
 		ProcesoImpl proceso = new ProcesoImpl();
 		return proceso;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Terreno createTerreno() {
+		TerrenoImpl terreno = new TerrenoImpl();
+		return terreno;
 	}
 
 	/**

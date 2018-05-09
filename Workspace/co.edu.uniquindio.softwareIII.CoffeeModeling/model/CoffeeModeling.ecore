@@ -4,42 +4,40 @@
     nsPrefix="CoffeeModeling">
   <eClassifiers xsi:type="ecore:EClass" name="Finca">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lotes" upperBound="-1"
-        eType="#//Lote" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terreno" upperBound="-1"
+        eType="#//Terreno" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="empleado" upperBound="-1"
+        eType="#//Empleado" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lote">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recoleccion" eType="#//Recoleccion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flotes" eType="#//Flotes"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="despulpe" eType="#//Despulpe"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fermentacion" eType="#//Fermentacion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lavado" eType="#//Lavado"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secado" eType="#//Secado"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trilla" eType="#//Trilla"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seleccion" eType="#//Seleccion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tostion" eType="#//Tostion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="molienda" eType="#//Molienda"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="empaque" eType="#//Empaque"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaInicio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaFin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="empleados" upperBound="-1"
+        eType="#//Empleado"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="peso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="siembra" upperBound="-1"
-        eType="#//Siembra" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="recoleccion" upperBound="-1"
-        eType="#//Recoleccion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="flotes" upperBound="-1"
-        eType="#//Flotes" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="despulpe" upperBound="-1"
-        eType="#//Despulpe" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fermentacion" upperBound="-1"
-        eType="#//Fermentacion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lavado" upperBound="-1"
-        eType="#//Lavado" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="secado" upperBound="-1"
-        eType="#//Secado" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trilla" upperBound="-1"
-        eType="#//Trilla" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="seleccion" upperBound="-1"
-        eType="#//Seleccion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tostion" upperBound="-1"
-        eType="#//Tostion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="molienda" upperBound="-1"
-        eType="#//Molienda" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="empaque" upperBound="-1"
-        eType="#//Empaque" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="empleado" upperBound="-1"
-        eType="#//Empleado" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Siembra">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="edadCultivo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -51,17 +49,21 @@
         eType="#//Veneno" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="aguaRiego" upperBound="-1"
         eType="#//Agua" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lotes" upperBound="-1"
+        eType="#//Lote" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Abono">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaAplicado" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loteRelacionado" eType="#//Lote"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Veneno">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaAplicado" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loteRelacionado" eType="#//Lote"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDefectos">
-    <eLiterals name="Ninguno"/>
     <eLiterals name="Veteado" value="1"/>
     <eLiterals name="Reposado" value="2"/>
     <eLiterals name="Ambar" value="3"/>
@@ -88,31 +90,37 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recoleccion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fecha" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Flotes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cantGranoDefectuoso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="aguaUsada" upperBound="-1"
         eType="#//Agua" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Despulpe">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refMaquinaria" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaUltimoMantenimiento"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Agua">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cantidad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loteRelacionado" eType="#//Lote"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fermentacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="horaSol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="horaSombra" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lavado">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tecnica" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="aguaUsada" upperBound="-1"
         eType="#//Agua" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Secado">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -120,10 +128,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="horaSombra" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="horaAlmacenamiento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="humedad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="wildcards" value=""/>
+        <details key="name" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trilla">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tecnicaEmpleada" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="malla" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Seleccion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metodo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -132,6 +147,7 @@
         eType="#//Defecto" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="seleccionautomatica" upperBound="-1"
         eType="#//SeleccionAutomatica" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tostion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="horas" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -139,6 +155,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refMaquinaria" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaUltimoMantenimiento"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Defecto">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoDefectos"/>
@@ -152,6 +169,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refMaquinaria" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaUltimoMantenimiento"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Empaque">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -166,5 +184,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Proceso">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreProceso" eType="#//Procesos"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Terreno">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="siembra" upperBound="-1"
+        eType="#//Siembra" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
 </ecore:EPackage>

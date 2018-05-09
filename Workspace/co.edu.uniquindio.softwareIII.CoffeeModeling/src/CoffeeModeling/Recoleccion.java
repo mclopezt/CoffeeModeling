@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link CoffeeModeling.Recoleccion#getFecha <em>Fecha</em>}</li>
+ *   <li>{@link CoffeeModeling.Recoleccion#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getRecoleccion()
@@ -46,5 +47,31 @@ public interface Recoleccion extends EObject {
 	 * @generated
 	 */
 	void setFecha(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getRecoleccion_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Recoleccion#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Recoleccion

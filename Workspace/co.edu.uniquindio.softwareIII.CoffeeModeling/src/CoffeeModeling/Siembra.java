@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link CoffeeModeling.Siembra#getAbono <em>Abono</em>}</li>
  *   <li>{@link CoffeeModeling.Siembra#getVeneno <em>Veneno</em>}</li>
  *   <li>{@link CoffeeModeling.Siembra#getAguaRiego <em>Agua Riego</em>}</li>
+ *   <li>{@link CoffeeModeling.Siembra#getId <em>Id</em>}</li>
+ *   <li>{@link CoffeeModeling.Siembra#getLotes <em>Lotes</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getSiembra()
@@ -153,5 +155,47 @@ public interface Siembra extends EObject {
 	 * @generated
 	 */
 	EList<Agua> getAguaRiego();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getSiembra_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Siembra#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lotes</b></em>' containment reference list.
+	 * The list contents are of type {@link CoffeeModeling.Lote}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lotes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lotes</em>' containment reference list.
+	 * @see CoffeeModeling.CoffeeModelingPackage#getSiembra_Lotes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Lote> getLotes();
 
 } // Siembra

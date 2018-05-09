@@ -62,6 +62,7 @@ public class AguaItemProvider
 
 			addTipoPropertyDescriptor(object);
 			addCantidadPropertyDescriptor(object);
+			addLoteRelacionadoPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +107,28 @@ public class AguaItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lote Relacionado feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoteRelacionadoPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Agua_loteRelacionado_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Agua_loteRelacionado_feature", "_UI_Agua_type"),
+				 CoffeeModelingPackage.Literals.AGUA__LOTE_RELACIONADO,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

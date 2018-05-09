@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="co.edu.uniquindio.softwareIII.CoffeeModeling.application">
+      </category>
+      <view
+            name="Sample View"
+            inject="true"
+            icon="icons/sample.png"
+            category="co.edu.uniquindio.softwareIII.CoffeeModeling.application"
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.SampleView"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.SampleView">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.FincaGui"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.FincaGui"
+            name="Finca">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.FincaGui"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.FincaGui"
+            name="Terrenos de la finca">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.FincaGui"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.FincaGui"
+            name="Terrenos de la finca">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.Terreno"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.Terreno"
+            name="Siembras">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.dsdaa"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.dsdaa"
+            name="New ViewPart">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.TerrenoGUI"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.TerrenoGUI"
+            name="New ViewPart">
+      </view>
+      <view
+            class="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.TerrenoGui"
+            id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.TerrenoGui"
+            name="Terrenos">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="co.edu.uniquindio.softwareiii.coffeemodeling.application.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>

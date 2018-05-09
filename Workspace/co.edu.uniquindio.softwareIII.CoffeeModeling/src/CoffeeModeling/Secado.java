@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link CoffeeModeling.Secado#getHoraSombra <em>Hora Sombra</em>}</li>
  *   <li>{@link CoffeeModeling.Secado#getHoraAlmacenamiento <em>Hora Almacenamiento</em>}</li>
  *   <li>{@link CoffeeModeling.Secado#getHumedad <em>Humedad</em>}</li>
+ *   <li>{@link CoffeeModeling.Secado#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see CoffeeModeling.CoffeeModelingPackage#getSecado()
@@ -154,5 +155,31 @@ public interface Secado extends EObject {
 	 * @generated
 	 */
 	void setHumedad(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see CoffeeModeling.CoffeeModelingPackage#getSecado_Id()
+	 * @model extendedMetaData="wildcards='' name=''"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link CoffeeModeling.Secado#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Secado

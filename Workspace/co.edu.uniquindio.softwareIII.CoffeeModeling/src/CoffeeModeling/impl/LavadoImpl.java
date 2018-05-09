@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link CoffeeModeling.impl.LavadoImpl#getTecnica <em>Tecnica</em>}</li>
  *   <li>{@link CoffeeModeling.impl.LavadoImpl#getAguaUsada <em>Agua Usada</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.LavadoImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 	 * @ordered
 	 */
 	protected EList<Agua> aguaUsada;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +145,27 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.LAVADO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +187,8 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 				return getTecnica();
 			case CoffeeModelingPackage.LAVADO__AGUA_USADA:
 				return getAguaUsada();
+			case CoffeeModelingPackage.LAVADO__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,6 +209,9 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 				getAguaUsada().clear();
 				getAguaUsada().addAll((Collection<? extends Agua>)newValue);
 				return;
+			case CoffeeModelingPackage.LAVADO__ID:
+				setId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -183,6 +230,9 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 			case CoffeeModelingPackage.LAVADO__AGUA_USADA:
 				getAguaUsada().clear();
 				return;
+			case CoffeeModelingPackage.LAVADO__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -199,6 +249,8 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 				return TECNICA_EDEFAULT == null ? tecnica != null : !TECNICA_EDEFAULT.equals(tecnica);
 			case CoffeeModelingPackage.LAVADO__AGUA_USADA:
 				return aguaUsada != null && !aguaUsada.isEmpty();
+			case CoffeeModelingPackage.LAVADO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +267,8 @@ public class LavadoImpl extends MinimalEObjectImpl.Container implements Lavado {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (tecnica: ");
 		result.append(tecnica);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link CoffeeModeling.impl.MoliendaImpl#getRefMaquinaria <em>Ref Maquinaria</em>}</li>
  *   <li>{@link CoffeeModeling.impl.MoliendaImpl#getFechaUltimoMantenimiento <em>Fecha Ultimo Mantenimiento</em>}</li>
+ *   <li>{@link CoffeeModeling.impl.MoliendaImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 	 * @ordered
 	 */
 	protected String fechaUltimoMantenimiento = FECHA_ULTIMO_MANTENIMIENTO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +154,27 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoffeeModelingPackage.MOLIENDA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -140,6 +182,8 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 				return getRefMaquinaria();
 			case CoffeeModelingPackage.MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO:
 				return getFechaUltimoMantenimiento();
+			case CoffeeModelingPackage.MOLIENDA__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +201,9 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 				return;
 			case CoffeeModelingPackage.MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO:
 				setFechaUltimoMantenimiento((String)newValue);
+				return;
+			case CoffeeModelingPackage.MOLIENDA__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,6 +223,9 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 			case CoffeeModelingPackage.MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO:
 				setFechaUltimoMantenimiento(FECHA_ULTIMO_MANTENIMIENTO_EDEFAULT);
 				return;
+			case CoffeeModelingPackage.MOLIENDA__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,6 +242,8 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 				return REF_MAQUINARIA_EDEFAULT == null ? refMaquinaria != null : !REF_MAQUINARIA_EDEFAULT.equals(refMaquinaria);
 			case CoffeeModelingPackage.MOLIENDA__FECHA_ULTIMO_MANTENIMIENTO:
 				return FECHA_ULTIMO_MANTENIMIENTO_EDEFAULT == null ? fechaUltimoMantenimiento != null : !FECHA_ULTIMO_MANTENIMIENTO_EDEFAULT.equals(fechaUltimoMantenimiento);
+			case CoffeeModelingPackage.MOLIENDA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,6 +262,8 @@ public class MoliendaImpl extends MinimalEObjectImpl.Container implements Molien
 		result.append(refMaquinaria);
 		result.append(", fechaUltimoMantenimiento: ");
 		result.append(fechaUltimoMantenimiento);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

@@ -1,17 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="coffeemodeling" version="12.0.0.2017041100">
-  <ownedViewpoints name="lotes" modelFileExtension="coffeemodeling">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Finca diagram" domainClass="CoffeeModeling.Finca">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="coffeemodeling" version="12.0.0.2017041100">
+  <ownedViewpoints name="Terrenos" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Terrenos" domainClass="CoffeeModeling::Finca">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <ownedLineMappings name="Terreno" domainClass="CoffeeModeling::Terreno" semanticCandidatesExpression="feature:terreno" headerLabelExpression="aql:self.id"/>
+      <ownedColumnMappings name="Altura" headerLabelExpression="Altura" featureName="altura" labelExpression="aql:self.altura"/>
+      <ownedColumnMappings name="Temperatura" headerLabelExpression="Temperatura" featureName="temperatura" labelExpression="aql:self.temperatura"/>
+      <ownedColumnMappings name="Longitud" headerLabelExpression="Longitud" featureName="longitud" labelExpression="aql:self.longitud"/>
+      <ownedColumnMappings name="Latitud" headerLabelExpression="Latitud" featureName="latitud" labelExpression="aql:self.latitud"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Trabajadores" domainClass="CoffeeModeling::Finca">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <ownedLineMappings name="Trabajador" domainClass="CoffeeModeling::Empleado" semanticCandidatesExpression="feature:empleado" headerLabelExpression="aql:self.nombreCompleto"/>
+      <ownedColumnMappings name="Experiencia" headerLabelExpression="Experiencia" featureName="tiempoExperiencia" labelExpression="aql:self. tiempoExperiencia"/>
+      <ownedColumnMappings name="TipoPoblacion" headerLabelExpression="Tipo población" featureName="poblacion" labelExpression="aql:self. poblacion"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Terrenos en Finca" domainClass="CoffeeModeling::Finca" enablePopupBars="true">
       <metamodel href="http://www.example.org/CoffeeModeling#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="LoteNode" semanticCandidatesExpression="feature:lotes" domainClass="CoffeeModeling::Lote">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\obj16\Iconos View Desing\Lote.png">
+        <containerMappings name="Finca" semanticCandidatesExpression="var:self" domainClass="CoffeeModeling::Finca">
+          <subNodeMappings name="Terrenos" semanticCandidatesExpression="feature:terreno" doubleClickDescription="//@ownedViewpoints[name='Terrenos']/@ownedRepresentations[name='Terrenos%20en%20Finca']/@defaultLayer/@toolSections.0/@ownedTools[name='IrADiagrama']" domainClass="CoffeeModeling::Terreno">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW" width="8" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="12" labelExpression="feature:nombre" widthComputationExpression="5" heightComputationExpression="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="IrADiagrama" mappings="//@ownedViewpoints[name='Terrenos']/@ownedRepresentations[name='Terrenos%20en%20Finca']/@defaultLayer/@containerMappings[name='Finca']/@subNodeMappings[name='Terrenos']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Siembras']/@ownedRepresentations[name='Siembras%20De%20Terreno%20diagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Crear Terreno" nodeMappings="//@ownedViewpoints[name='Terrenos']/@ownedRepresentations[name='Terrenos%20en%20Finca']/@additionalLayers[name='TerrenosV']/@nodeMappings[name='TerrenoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Terreno" referenceName="terreno">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Terreno '+container.terreno->filter(CoffeeModeling::Terreno)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="TerrenosV">
+        <nodeMappings name="TerrenoNode" semanticCandidatesExpression="feature:terreno" domainClass="CoffeeModeling::Terreno">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Terreno.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Siembras" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Siembras De Terreno diagram" domainClass="CoffeeModeling.Terreno">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="Siembras" semanticCandidatesExpression="var:self" domainClass="CoffeeModeling::Terreno">
+          <subNodeMappings name="SiembraInterna" semanticCandidatesExpression="feature:siembra" doubleClickDescription="//@ownedViewpoints[name='Siembras']/@ownedRepresentations[name='Siembras%20De%20Terreno%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='VerSiembra']" domainClass="CoffeeModeling::Siembra">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW" width="8" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="12" labelExpression="feature:id" widthComputationExpression="60" heightComputationExpression="30">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Volver a Terrenos" semanticCandidatesExpression="feature:eContainer" domainClass="CoffeeModeling::Finca">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:'Regresar'" widthComputationExpression="10" heightComputationExpression="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearLote" nodeMappings="//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']/@defaultLayer/@nodeMappings[name='LoteNode']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="IrAFinca">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" diagramDescription="//@ownedViewpoints[name='Terrenos']/@ownedRepresentations[name='Terrenos%20en%20Finca']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Crear Siembra" nodeMappings="//@ownedViewpoints[name='Siembras']/@ownedRepresentations[name='Siembras%20De%20Terreno%20diagram']/@additionalLayers[name='Siembras']/@nodeMappings[name='SiembraNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Siembra" referenceName="siembra">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Siembra'+container.siembra->filter(CoffeeModeling::Siembra)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="VerSiembra" mappings="//@ownedViewpoints[name='Siembras']/@ownedRepresentations[name='Siembras%20De%20Terreno%20diagram']/@defaultLayer/@containerMappings[name='Siembras']/@subNodeMappings[name='SiembraInterna']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" diagramDescription="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Siembras">
+        <nodeMappings name="SiembraNode" semanticCandidatesExpression="feature:siembra" domainClass="CoffeeModeling::Siembra">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Siembra.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Siembras" domainClass="CoffeeModeling::Terreno">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <ownedLineMappings name="Siembra" domainClass="CoffeeModeling::Siembra" semanticCandidatesExpression="feature:siembra" headerLabelExpression="aql:self.id"/>
+      <ownedColumnMappings name="Fecha inicio" headerLabelExpression="Fecha inicio" featureName="fechaInicio" labelExpression="aql:self.fechaInicio"/>
+      <ownedColumnMappings name="Variedad" headerLabelExpression="Variedad" featureName="variedad" labelExpression="aql:self.variedad"/>
+      <ownedColumnMappings name="Edad cultivo" headerLabelExpression="Edad cultivo" featureName="edadCultivo" labelExpression="aql:self.edadCultivo"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Lote" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Lotes De Una Siembra diagram" domainClass="CoffeeModeling::Siembra">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="Lotes" semanticCandidatesExpression="var:self" domainClass="CoffeeModeling.Siembra">
+          <subNodeMappings name="LoteInterno" semanticCandidatesExpression="feature:lotes" doubleClickDescription="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='IrALote']" domainClass="CoffeeModeling::Lote">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW" width="8" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:id" widthComputationExpression="30" heightComputationExpression="20">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Regar Siembra" semanticCandidatesExpression="var:self" domainClass="CoffeeModeling.Siembra">
+          <subNodeMappings name="Riego" semanticCandidatesExpression="feature:aguaRiego" domainClass="CoffeeModeling::Agua">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:tipo" labelPosition="node" resizeKind="NSEW" width="8" height="4">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:'Riegos'" widthComputationExpression="30" heightComputationExpression="20">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Volver a Siembras" semanticCandidatesExpression="feature:eContainer" doubleClickDescription="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='IrATerreno']" domainClass="CoffeeModeling::Terreno">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:'Regresar'" widthComputationExpression="10" heightComputationExpression="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings/>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearLote" nodeMappings="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']/@additionalLayers[name='Lotes']/@nodeMappings[name='LoteNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -22,9 +199,484 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="IrATerreno" mappings="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']/@defaultLayer/@containerMappings[name='Volver%20a%20Siembras']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" diagramDescription="//@ownedViewpoints[name='Siembras']/@ownedRepresentations[name='Siembras%20De%20Terreno%20diagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearRiego" nodeMappings="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']/@additionalLayers[name='Lotes']/@nodeMappings[name='RiegoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Agua" referenceName="aguaRiego">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tipo" valueExpression="aql:'Riego'+container.aguaRiego->filter(CoffeeModeling::Agua)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="IrALote" mappings="//@ownedViewpoints[name='Lote']/@ownedRepresentations[name='Lotes%20De%20Una%20Siembra%20diagram']/@defaultLayer/@containerMappings[name='Lotes']/@subNodeMappings[name='LoteInterno']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" diagramDescription="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Lotes">
+        <nodeMappings name="LoteNode" semanticCandidatesExpression="feature:lotes" domainClass="CoffeeModeling::Lote">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Lote.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="RiegoNode" semanticCandidatesExpression="feature:aguaRiego" domainClass="CoffeeModeling::Agua">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:tipo" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Agua.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Informe de lotes" domainClass="CoffeeModeling::Siembra">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <ownedLineMappings name="Lotes" domainClass="CoffeeModeling::Lote" semanticCandidatesExpression="feature:lotes"/>
+      <ownedColumnMappings name="Fecha inicio" headerLabelExpression="Fecha inicio" featureName="fechaInicio" labelExpression="aql:self.fechaInicio"/>
+      <ownedColumnMappings name="Peso" headerLabelExpression="Peso" featureName="peso" labelExpression="aql:self.peso"/>
+      <ownedColumnMappings name="Fecha fin" headerLabelExpression="Fecha fin" featureName="fechaFin" labelExpression="aql:self.fechaFin"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Veneno usado" domainClass="CoffeeModeling::Siembra">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <ownedLineMappings name="Fecha" domainClass="CoffeeModeling::Veneno" semanticCandidatesExpression="feature:veneno" headerLabelExpression="aql:self.fechaAplicado"/>
+      <ownedColumnMappings name="Nombre" headerLabelExpression="Nombre del veneno" featureName="nombre" labelExpression="aql:self.nombre"/>
+      <ownedColumnMappings name="Lote" headerLabelExpression="Lote" featureName="loteRelacionado" labelExpression="aql:'Aplicado durante '+self.loteRelacionado.id"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Abono usado" domainClass="CoffeeModeling::Siembra">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <ownedLineMappings name="Fecha" domainClass="CoffeeModeling::Abono" semanticCandidatesExpression="feature:abono" headerLabelExpression="aql:self.fechaAplicado "/>
+      <ownedColumnMappings name="Nombre" headerLabelExpression="Nombre del abono" featureName="nombre" labelExpression="aql:self.nombre"/>
+      <ownedColumnMappings name="Lote" headerLabelExpression="Lote " featureName="loteRelacionado" labelExpression="aql:'Aplicado durante '+self.loteRelacionado.id"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Procesos De Un lote" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Proceso Lotes diagram" domainClass="CoffeeModeling.Lote" enablePopupBars="true">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <defaultLayer name="Default">
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Recolectar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Recoleccion']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Recoleccion" referenceName="recoleccion">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Recolección'+container.recoleccion->filter(CoffeeModeling::Recoleccion)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PonerFlote" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Flote']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Flotes" referenceName="flotes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Poner En Flote'+container. flotes->filter(CoffeeModeling::Flotes)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Despulpar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Despulpe']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Despulpe" referenceName="despulpe">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Despulpe'+container.despulpe->filter(CoffeeModeling::Despulpe)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Fermentar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Fermentacion']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Fermentacion" referenceName="fermentacion">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Fermentacion'+container.fermentacion->filter(CoffeeModeling::Fermentacion)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Lavar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Lavado']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Lavado" referenceName="lavado">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Lavado'+container.lavado->filter(CoffeeModeling::Lavado)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Secar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Secado']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Secado" referenceName="secado">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Secado'+container.secado->filter(CoffeeModeling::Secado)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Trillar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Trilla']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Trilla" referenceName="trilla">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Trilla'+container.trilla->filter(CoffeeModeling::Trilla)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Seleccionar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Seleccion']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Seleccion" referenceName="seleccion">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Seleccion'+container.seleccion->filter(CoffeeModeling::Seleccion)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Tostar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Tostion']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Tostion" referenceName="tostion">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Tostion'+container.tostion->filter(CoffeeModeling::Tostion)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Molienda" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Molienda']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Molienda" referenceName="molienda">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Molienda'+container.molienda->filter(CoffeeModeling::Molienda)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Empacar" nodeMappings="//@ownedViewpoints[name='Procesos%20De%20Un%20lote']/@ownedRepresentations[name='Proceso%20Lotes%20diagram']/@additionalLayers[name='Procesos']/@nodeMappings[name='Empaque']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Empaque" referenceName="empaque">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tipo" valueExpression="aql:'Empaque'+container.empaque->filter(CoffeeModeling::Empaque)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Procesos">
+        <nodeMappings name="Recoleccion" semanticCandidatesExpression="feature:recoleccion" domainClass="CoffeeModeling::Recoleccion">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Recoleccion.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Flote" semanticCandidatesExpression="feature:flotes" domainClass="CoffeeModeling::Flotes">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Flotes.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Despulpe" semanticCandidatesExpression="feature:despulpe" domainClass="CoffeeModeling::Despulpe">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Despulpe.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Fermentacion" semanticCandidatesExpression="feature:fermentacion" domainClass="CoffeeModeling::Fermentacion">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Fermentacion.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Lavado" semanticCandidatesExpression="feature:lavado" domainClass="CoffeeModeling::Lavado">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Lavado.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Empaque" semanticCandidatesExpression="feature:empaque" domainClass="CoffeeModeling::Empaque">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:tipo" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Empaque.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Molienda" semanticCandidatesExpression="feature:molienda" domainClass="CoffeeModeling::Molienda">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Molienda.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Tostion" semanticCandidatesExpression="feature:tostion" domainClass="CoffeeModeling::Tostion">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Tostion.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Seleccion" semanticCandidatesExpression="feature:seleccion" domainClass="CoffeeModeling::Seleccion">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Seleccion.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Trilla" semanticCandidatesExpression="feature:trilla" domainClass="CoffeeModeling::Trilla">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Trilla.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Secado" semanticCandidatesExpression="feature:secado" domainClass="CoffeeModeling::Secado">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Secado.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+      </additionalLayers>
+      <additionalLayers name="Contenedor">
+        <containerMappings name="Procesos" semanticCandidatesExpression="var:self" domainClass="CoffeeModeling.Lote">
+          <subNodeMappings name="RecoleccionInterna" semanticCandidatesExpression="feature:eAllContents"/>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:'Procesos de '+self.id" widthComputationExpression="40" heightComputationExpression="30">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Empleados" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Empleados diagram" domainClass="CoffeeModeling::Finca">
+      <metamodel href="file:/C:/Eclipse/eclipse%20Oxygen/workspace/co.edu.uniquindio.softwareIII.CoffeeModeling/model/CoffeeModeling.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="EmpleadoNode" semanticCandidatesExpression="feature:empleado" domainClass="CoffeeModeling::Empleado">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:nombreCompleto" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Empleado.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearEmpleado" nodeMappings="//@ownedViewpoints[name='Empleados']/@ownedRepresentations[name='Empleados%20diagram']/@defaultLayer/@nodeMappings[name='EmpleadoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Empleado" referenceName="empleado"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Proceso Del Empleado" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Proceso En Que Participa diagram" domainClass="CoffeeModeling::Empleado">
+      <metamodel href="file:/C:/Eclipse/eclipse%20Oxygen/workspace/co.edu.uniquindio.softwareIII.CoffeeModeling/model/CoffeeModeling.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="ProcesoNode" semanticCandidatesExpression="feature:procesoEnQueParticipa" domainClass="CoffeeModeling::Proceso">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:nombreProceso" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Proceso.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ProcesoInvolucrado" nodeMappings="//@ownedViewpoints[name='Proceso%20Del%20Empleado']/@ownedRepresentations[name='Proceso%20En%20Que%20Participa%20diagram']/@defaultLayer/@nodeMappings[name='ProcesoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Proceso" referenceName="procesoEnQueParticipa">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nombreProceso" valueExpression="aql:'Proceso'+container.procesoEnQueParticipa->filter(CoffeeModeling::Proceso)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="Agua Usada Flote" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name=" Agua Usada Flote diagram" domainClass="CoffeeModeling::Flotes">
+      <defaultLayer name="Default">
+        <nodeMappings name="AguaNode" semanticCandidatesExpression="feature:aguaUsada" domainClass="CoffeeModeling::Agua">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:tipo" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Agua.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="aguaUsada" nodeMappings="//@ownedViewpoints[name='Agua%20Usada%20Flote']/@ownedRepresentations[name='%20Agua%20Usada%20Flote%20diagram']/@defaultLayer/@nodeMappings[name='AguaNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Agua" referenceName="aguaUsada">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tipo" valueExpression="aql:'Usada'+container.aguaUsada->filter(CoffeeModeling::Agua)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="Agua Usada Lavado" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Agua Usada Lavado diagram" domainClass="CoffeeModeling::Lavado">
+      <defaultLayer name="Default">
+        <nodeMappings name="AguaNode" semanticCandidatesExpression="feature:aguaUsada" domainClass="CoffeeModeling::Agua">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:tipo" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Agua.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearAguaUsada" nodeMappings="//@ownedViewpoints[name='Agua%20Usada%20Lavado']/@ownedRepresentations[name='Agua%20Usada%20Lavado%20diagram']/@defaultLayer/@nodeMappings[name='AguaNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Agua" referenceName="aguaUsada">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tipo" valueExpression="aql:'Usada'+container.aguaUsada->filter(CoffeeModeling::Agua)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="Veneno De La Siembra" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Veneno De La Siembra diagram" domainClass="CoffeeModeling::Siembra">
+      <metamodel href="file:/C:/Eclipse/eclipse%20Oxygen/workspace/co.edu.uniquindio.softwareIII.CoffeeModeling/model/CoffeeModeling.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="VenenoNode" semanticCandidatesExpression="feature:veneno" domainClass="CoffeeModeling::Veneno">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:nombre" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Veneno.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearVeneno" nodeMappings="//@ownedViewpoints[name='Veneno%20De%20La%20Siembra']/@ownedRepresentations[name='Veneno%20De%20La%20Siembra%20diagram']/@defaultLayer/@nodeMappings[name='VenenoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Veneno" referenceName="veneno">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="aql:'Veneno'+container.veneno->filter(CoffeeModeling::Veneno)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Abono De La Siembra" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Abono De La Siembra diagram" domainClass="CoffeeModeling::Siembra">
+      <metamodel href="file:/C:/Eclipse/eclipse%20Oxygen/workspace/co.edu.uniquindio.softwareIII.CoffeeModeling/model/CoffeeModeling.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="AbonoNode" semanticCandidatesExpression="feature:abono" domainClass="CoffeeModeling::Abono">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:nombre" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Abono.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearAbono" nodeMappings="//@ownedViewpoints[name='Abono%20De%20La%20Siembra']/@ownedRepresentations[name='Abono%20De%20La%20Siembra%20diagram']/@defaultLayer/@nodeMappings[name='AbonoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Abono" referenceName="abono">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="aql:'Abono'+container.abono->filter(CoffeeModeling::Abono)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Defectos De La Seleccion" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Defetos diagram" domainClass="CoffeeModeling::Seleccion">
+      <metamodel href="file:/C:/Eclipse/eclipse%20Oxygen/workspace/co.edu.uniquindio.softwareIII.CoffeeModeling/model/CoffeeModeling.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="DefectoNode" semanticCandidatesExpression="feature:defecto" domainClass="CoffeeModeling::Defecto">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:tipo" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\Defecto.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearDefecto" nodeMappings="//@ownedViewpoints[name='Defectos%20De%20La%20Seleccion']/@ownedRepresentations[name='Defetos%20diagram']/@defaultLayer/@nodeMappings[name='DefectoNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Defecto" referenceName="defecto">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tipo" valueExpression="aql:'Defecto'+container.defecto->filter(CoffeeModeling::Defecto)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="Maquinaria De Seleccion" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Maquina diagram" domainClass="CoffeeModeling::Seleccion">
+      <metamodel href="file:/C:/Eclipse/eclipse%20Oxygen/workspace/co.edu.uniquindio.softwareIII.CoffeeModeling/model/CoffeeModeling.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="MaquinaNode" semanticCandidatesExpression="feature:seleccionautomatica" domainClass="CoffeeModeling::SeleccionAutomatica">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:refMaquinaria" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\design\SeleccionAutomatica.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearMaquina" nodeMappings="//@ownedViewpoints[name='Maquinaria%20De%20Seleccion']/@ownedRepresentations[name='Maquina%20diagram']/@defaultLayer/@nodeMappings[name='MaquinaNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::SeleccionAutomatica" referenceName="seleccionautomatica">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="refMaquinaria" valueExpression="aql:'Maquina'+container.seleccionautomatica->filter(CoffeeModeling::SeleccionAutomatica)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
