@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoffeeModeling:Finca xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:CoffeeModeling="http://www.example.org/CoffeeModeling">
+  <lotes id="Lote1">
+    <siembra edadCultivo="3" variedad="Caturro"/>
+    <recoleccion/>
+    <flotes/>
+    <despulpe/>
+    <fermentacion/>
+    <lavado/>
+    <secado/>
+    <trilla/>
+    <seleccion/>
+    <tostion/>
+    <molienda/>
+    <empaque/>
+  </lotes>
+</CoffeeModeling:Finca>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CoffeeModeling="http://www.example.org/CoffeeModeling" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_UuVtUDw5Eei8z5MMQ1ifHg" selectedViews="_rqyBoDw-EeiqWLhsNophdg _T_RdsDyCEeiDlZJO6b7RCg" version="12.1.0.201708031200">
+    <semanticResources>My.coffeemodeling</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_rqyBoDw-EeiqWLhsNophdg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling.odesign#//@ownedViewpoints[name='lotes']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_IoNJtTyAEeiDlZJO6b7RCg" name="new Finca diagram" repPath="#_IoKtcDyAEeiDlZJO6b7RCg">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling.odesign#//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']"/>
+        <target xmi:type="CoffeeModeling:Finca" href="My.coffeemodeling#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_T_RdsDyCEeiDlZJO6b7RCg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_d563BTyEEeiDlZJO6b7RCg" name="new Lote diagram" repPath="#_d55o4DyEEeiDlZJO6b7RCg">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']"/>
+        <target xmi:type="CoffeeModeling:Lote" href="My.coffeemodeling#//@lotes.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_WjLBADyGEeiDlZJO6b7RCg" name="new Lote diagram" repPath="#_WjJy4DyGEeiDlZJO6b7RCg">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_IoNJsDyAEeiDlZJO6b7RCg" name="new Finca diagram" uid="_IoKtcDyAEeiDlZJO6b7RCg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_IoNJsTyAEeiDlZJO6b7RCg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_IoNJsjyAEeiDlZJO6b7RCg"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_IoOX0DyAEeiDlZJO6b7RCg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_IoOX0TyAEeiDlZJO6b7RCg" type="Sirius" element="_IoNJsDyAEeiDlZJO6b7RCg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_SBrIkDyCEeiDlZJO6b7RCg" type="2001" element="_SBpTYDyCEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_SBrvojyCEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_SBrvozyCEeiDlZJO6b7RCg" x="-5" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_SBsWsDyCEeiDlZJO6b7RCg" type="3005" element="_SBpTYTyCEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_SBsWsTyCEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SBsWsjyCEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_SBrvoDyCEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SBrvoTyCEeiDlZJO6b7RCg" x="285" y="65" width="40" height="40"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_IoOX0jyAEeiDlZJO6b7RCg"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_SBpTYDyCEeiDlZJO6b7RCg" name="Lote1" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Lote" href="My.coffeemodeling#//@lotes.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Lote" href="My.coffeemodeling#//@lotes.0"/>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_SBpTYTyCEeiDlZJO6b7RCg" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\obj16\Iconos View Desing\Lote.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling.odesign#//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']/@defaultLayer/@nodeMappings[name='LoteNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling.odesign#//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']/@defaultLayer/@nodeMappings[name='LoteNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling.odesign#//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_IoNJtDyAEeiDlZJO6b7RCg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling.odesign#//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']/@defaultLayer"/>
+    <target xmi:type="CoffeeModeling:Finca" href="My.coffeemodeling#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_d563ADyEEeiDlZJO6b7RCg" name="new Lote diagram" uid="_d55o4DyEEeiDlZJO6b7RCg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_d563ATyEEeiDlZJO6b7RCg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_d563AjyEEeiDlZJO6b7RCg"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_d58FIDyEEeiDlZJO6b7RCg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_d58FITyEEeiDlZJO6b7RCg" type="Sirius" element="_d563ADyEEeiDlZJO6b7RCg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_vk0OoDyIEeiDlZJO6b7RCg" type="2001" element="_vkxLUDyIEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_vk01sDyIEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_vk01sTyIEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vk1cwDyIEeiDlZJO6b7RCg" type="3003" element="_vkxLUTyIEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_vk1cwTyIEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vk1cwjyIEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_vk0OoTyIEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vk0OojyIEeiDlZJO6b7RCg" x="45" y="20" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wCdz8DyIEeiDlZJO6b7RCg" type="2001" element="_wBNPsDyIEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_wCfCEDyIEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_wCfCETyIEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wCgQMDyIEeiDlZJO6b7RCg" type="3003" element="_wBu0IDyIEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_wCgQMTyIEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wCgQMjyIEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_wCdz8TyIEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wCdz8jyIEeiDlZJO6b7RCg" x="190" y="20" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uXQZ4DyJEeiDlZJO6b7RCg" type="2001" element="_uXNWkDyJEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_uXRoADyJEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_uXRoATyJEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uXRoAjyJEeiDlZJO6b7RCg" type="3003" element="_uXNWkTyJEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_uXRoAzyJEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uXRoBDyJEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_uXQZ4TyJEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uXQZ4jyJEeiDlZJO6b7RCg" x="330" y="20" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_QNi-4DyKEeiDlZJO6b7RCg" type="2001" element="_QNdfUDyKEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_QNi-4zyKEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_QNi-5DyKEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QNrhwDyKEeiDlZJO6b7RCg" type="3017" element="_QNf7kDyKEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QNrhwTyKEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QNrhwjyKEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_QNi-4TyKEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QNi-4jyKEeiDlZJO6b7RCg" x="70" y="85" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Qan8IDyLEeiDlZJO6b7RCg" type="2001" element="_Qak40DyLEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_QaojMDyLEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_QaojMTyLEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QapKQDyLEeiDlZJO6b7RCg" type="3017" element="_Qak40TyLEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QapKQTyLEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QapKQjyLEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Qan8ITyLEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qan8IjyLEeiDlZJO6b7RCg" x="210" y="85" width="60" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oIlmQDyLEeiDlZJO6b7RCg" type="2001" element="_oIii8DyLEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_oImNUDyLEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_oImNUTyLEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_oImNUjyLEeiDlZJO6b7RCg" type="3017" element="_oIii8TyLEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_oImNUzyLEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oImNVDyLEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_oIlmQTyLEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIlmQjyLEeiDlZJO6b7RCg" x="355" y="85" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_KeT5QDyMEeiDlZJO6b7RCg" type="2001" element="_KeQO4DyMEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_KeUgUDyMEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KeUgUTyMEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KeUgUjyMEeiDlZJO6b7RCg" type="3002" element="_KeQ18DyMEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KeUgUzyMEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KeUgVDyMEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_KeT5QTyMEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KeT5QjyMEeiDlZJO6b7RCg" x="55" y="160" width="80" height="80"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_pf5iADyMEeiDlZJO6b7RCg" type="2001" element="_pf1QkDyMEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_pf6JEDyMEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_pf6JETyMEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pf6wIDyMEeiDlZJO6b7RCg" type="3002" element="_pf13oDyMEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_pf6wITyMEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf6wIjyMEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_pf5iATyMEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf5iAjyMEeiDlZJO6b7RCg" x="200" y="160" width="80" height="80"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_KIx4sDyNEeiDlZJO6b7RCg" type="2001" element="_KIuOUDyNEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_KIyfwDyNEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KIyfwTyNEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KIyfwjyNEeiDlZJO6b7RCg" type="3002" element="_KIuOUTyNEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KIyfwzyNEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KIyfxDyNEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_KIx4sTyNEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KIx4sjyNEeiDlZJO6b7RCg" x="340" y="160" width="80" height="80"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_guL_UDyNEeiDlZJO6b7RCg" type="2001" element="_guBnQDyNEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_guL_UzyNEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_guL_VDyNEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_guPpsDyNEeiDlZJO6b7RCg" type="3016" element="_guHt4DyNEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_guPpsTyNEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_guPpsjyNEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_guL_UTyNEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_guL_UjyNEeiDlZJO6b7RCg" x="45" y="270" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_7XCGMDyNEeiDlZJO6b7RCg" type="2001" element="_7W9NsDyNEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_7XCtQDyNEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_7XCtQTyNEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7XDUUDyNEeiDlZJO6b7RCg" type="3016" element="_7W9NsTyNEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_7XDUUTyNEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7XDUUjyNEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_7XCGMTyNEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7XCGMjyNEeiDlZJO6b7RCg" x="190" y="270" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_d7GXMDyOEeiDlZJO6b7RCg" type="2001" element="_d7AQkDyOEeiDlZJO6b7RCg">
+          <children xmi:type="notation:Node" xmi:id="_d7G-QDyOEeiDlZJO6b7RCg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_d7G-QTyOEeiDlZJO6b7RCg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_d7HlUDyOEeiDlZJO6b7RCg" type="3016" element="_d7AQkTyOEeiDlZJO6b7RCg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_d7HlUTyOEeiDlZJO6b7RCg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d7HlUjyOEeiDlZJO6b7RCg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_d7GXMTyOEeiDlZJO6b7RCg" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d7GXMjyOEeiDlZJO6b7RCg" x="330" y="270" width="100" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_d58FIjyEEeiDlZJO6b7RCg"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_vkxLUDyIEeiDlZJO6b7RCg" name="Caturro" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Siembra" href="My.coffeemodeling#//@lotes.0/@siembra.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Siembra" href="My.coffeemodeling#//@lotes.0/@siembra.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_vkxLUTyIEeiDlZJO6b7RCg" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Siembra']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Siembra']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_wBNPsDyIEeiDlZJO6b7RCg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Recoleccion" href="My.coffeemodeling#//@lotes.0/@recoleccion.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Recoleccion" href="My.coffeemodeling#//@lotes.0/@recoleccion.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_wBu0IDyIEeiDlZJO6b7RCg" labelPosition="node" width="10" height="5" color="204,242,166">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Recoleccion']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Recoleccion']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_uXNWkDyJEeiDlZJO6b7RCg" name="0" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Flotes" href="My.coffeemodeling#//@lotes.0/@flotes.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Flotes" href="My.coffeemodeling#//@lotes.0/@flotes.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_uXNWkTyJEeiDlZJO6b7RCg" labelPosition="node" width="10" height="5" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Flote']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Flote']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_QNdfUDyKEeiDlZJO6b7RCg" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Despulpe" href="My.coffeemodeling#//@lotes.0/@despulpe.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Despulpe" href="My.coffeemodeling#//@lotes.0/@despulpe.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_QNf7kDyKEeiDlZJO6b7RCg" labelPosition="node" width="5" height="5" color="253,206,137">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Despulpe']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Despulpe']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Qak40DyLEeiDlZJO6b7RCg" name="0.0" width="6" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Fermentacion" href="My.coffeemodeling#//@lotes.0/@fermentacion.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Fermentacion" href="My.coffeemodeling#//@lotes.0/@fermentacion.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_Qak40TyLEeiDlZJO6b7RCg" labelPosition="node" width="6" height="5" color="217,196,215">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Fermentacion']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Fermentacion']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_oIii8DyLEeiDlZJO6b7RCg" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Lavado" href="My.coffeemodeling#//@lotes.0/@lavado.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Lavado" href="My.coffeemodeling#//@lotes.0/@lavado.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_oIii8TyLEeiDlZJO6b7RCg" labelPosition="node" width="5" height="5" color="246,139,139">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Lavado']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Lavado']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_KeQO4DyMEeiDlZJO6b7RCg" width="8" height="8" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Secado" href="My.coffeemodeling#//@lotes.0/@secado.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Secado" href="My.coffeemodeling#//@lotes.0/@secado.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" xmi:id="_KeQ18DyMEeiDlZJO6b7RCg" labelPosition="node" backgroundColor="255,245,181">
+        <description xmi:type="style:DotDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Secado']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Secado']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_pf1QkDyMEeiDlZJO6b7RCg" width="8" height="8" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Trilla" href="My.coffeemodeling#//@lotes.0/@trilla.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Trilla" href="My.coffeemodeling#//@lotes.0/@trilla.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" xmi:id="_pf13oDyMEeiDlZJO6b7RCg" labelPosition="node" backgroundColor="138,226,52">
+        <description xmi:type="style:DotDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Trilla']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Trilla']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_KIuOUDyNEeiDlZJO6b7RCg" width="8" height="8" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Seleccion" href="My.coffeemodeling#//@lotes.0/@seleccion.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Seleccion" href="My.coffeemodeling#//@lotes.0/@seleccion.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" xmi:id="_KIuOUTyNEeiDlZJO6b7RCg" labelPosition="node" backgroundColor="252,175,62">
+        <description xmi:type="style:DotDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Seleccion']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Seleccion']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_guBnQDyNEeiDlZJO6b7RCg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Tostion" href="My.coffeemodeling#//@lotes.0/@tostion.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Tostion" href="My.coffeemodeling#//@lotes.0/@tostion.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_guHt4DyNEeiDlZJO6b7RCg" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="173,127,168">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Tostion']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Tostion']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_7W9NsDyNEeiDlZJO6b7RCg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Molienda" href="My.coffeemodeling#//@lotes.0/@molienda.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Molienda" href="My.coffeemodeling#//@lotes.0/@molienda.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_7W9NsTyNEeiDlZJO6b7RCg" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="114,159,207">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Molienda']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Molienda']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_d7AQkDyOEeiDlZJO6b7RCg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="CoffeeModeling:Empaque" href="My.coffeemodeling#//@lotes.0/@empaque.0"/>
+      <semanticElements xmi:type="CoffeeModeling:Empaque" href="My.coffeemodeling#//@lotes.0/@empaque.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_d7AQkTyOEeiDlZJO6b7RCg" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="252,233,79">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Empaque']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer/@nodeMappings[name='Empaque']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_d563BDyEEeiDlZJO6b7RCg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer"/>
+    <target xmi:type="CoffeeModeling:Lote" href="My.coffeemodeling#//@lotes.0"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_WjKZ8DyGEeiDlZJO6b7RCg" name="new Lote diagram" uid="_WjJy4DyGEeiDlZJO6b7RCg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_WjKZ8TyGEeiDlZJO6b7RCg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_WjKZ8jyGEeiDlZJO6b7RCg"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_WjLBATyGEeiDlZJO6b7RCg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_WjLBAjyGEeiDlZJO6b7RCg" type="Sirius" element="_WjKZ8DyGEeiDlZJO6b7RCg" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_WjLBAzyGEeiDlZJO6b7RCg"/>
+      </data>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_WjKZ9DyGEeiDlZJO6b7RCg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/my.coffeemodeling.design/description/coffeemodeling_lote.odesign#//@ownedViewpoints[name='procesos']/@ownedRepresentations[name='Lote%20diagram']/@defaultLayer"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

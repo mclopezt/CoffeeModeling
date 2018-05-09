@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="coffeemodeling" version="12.0.0.2017041100">
+  <ownedViewpoints name="lotes" modelFileExtension="coffeemodeling">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Finca diagram" domainClass="CoffeeModeling.Finca">
+      <metamodel href="http://www.example.org/CoffeeModeling#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="LoteNode" semanticCandidatesExpression="feature:lotes" domainClass="CoffeeModeling::Lote">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/co.edu.uniquindio.softwareIII.CoffeeModeling.edit\icons\full\obj16\Iconos View Desing\Lote.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="crearLote" nodeMappings="//@ownedViewpoints[name='lotes']/@ownedRepresentations[name='Finca%20diagram']/@defaultLayer/@nodeMappings[name='LoteNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="CoffeeModeling::Lote" referenceName="lotes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Lote'+container.lotes->filter(CoffeeModeling::Lote)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.coffeemodeling.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

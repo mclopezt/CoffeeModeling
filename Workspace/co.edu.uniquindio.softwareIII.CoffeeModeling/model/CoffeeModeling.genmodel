@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/co.edu.uniquindio.softwareIII.CoffeeModeling/src"
+    modelPluginID="co.edu.uniquindio.softwareIII.CoffeeModeling" modelName="CoffeeModeling"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>CoffeeModeling.ecore</foreignModel>
+  <genPackages prefix="CoffeeModeling" disposableProviderFactory="true" ecorePackage="CoffeeModeling.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CoffeeModeling.ecore#//TipoDefectos">
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Ninguno"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Veteado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Reposado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Ambar"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Mordido"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/SobreSecado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Brocado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Averranado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Inmaduro"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Vinagre"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Cristalizado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Cardenillo"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//TipoDefectos/Negro"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CoffeeModeling.ecore#//Procesos">
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Siembra"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Recoleccion"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Flotes"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Fermntacion"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Trilla"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Lavado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Secado"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Seleccion"/>
+      <genEnumLiterals ecoreEnumLiteral="CoffeeModeling.ecore#//Procesos/Empaque"/>
+    </genEnums>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Finca">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Finca/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Finca/lotes"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Lote">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lote/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lote/latitud"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lote/longitud"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lote/altura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lote/temperatura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lote/peso"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/siembra"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/recoleccion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/flotes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/despulpe"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/fermentacion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/lavado"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/secado"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/trilla"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/seleccion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/tostion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/molienda"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/empaque"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lote/empleado"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Siembra">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Siembra/edadCultivo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Siembra/fechaInicio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Siembra/variedad"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Siembra/abono"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Siembra/veneno"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Siembra/aguaRiego"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Abono">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Abono/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Abono/fechaAplicado"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Veneno">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Veneno/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Veneno/fechaAplicado"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Recoleccion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Recoleccion/fecha"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Flotes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Flotes/cantGranoDefectuoso"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Flotes/aguaUsada"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Despulpe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Despulpe/refMaquinaria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Despulpe/fechaUltimoMantenimiento"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Agua">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Agua/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Agua/cantidad"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Fermentacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Fermentacion/altitud"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Fermentacion/temperatura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Fermentacion/horaSol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Fermentacion/horaSombra"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Lavado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Lavado/tecnica"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Lavado/aguaUsada"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Secado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Secado/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Secado/horaSol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Secado/horaSombra"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Secado/horaAlmacenamiento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Secado/humedad"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Trilla">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Trilla/tecnicaEmpleada"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Trilla/malla"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Seleccion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Seleccion/metodo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Seleccion/diasAlmacenamiento"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Seleccion/defecto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Seleccion/seleccionautomatica"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Tostion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Tostion/horas"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Tostion/temperatura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Tostion/refMaquinaria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Tostion/fechaUltimoMantenimiento"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Defecto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Defecto/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//SeleccionAutomatica">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//SeleccionAutomatica/refMaquinaria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//SeleccionAutomatica/fechaUltimoMantenimiento"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Molienda">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Molienda/refMaquinaria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Molienda/fechaUltimoMantenimiento"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Empaque">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Empaque/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Empaque/codigo"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Empleado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Empleado/nombreCompleto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Empleado/tiempoExperiencia"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Empleado/poblacion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CoffeeModeling.ecore#//Empleado/procesoEnQueParticipa"/>
+    </genClasses>
+    <genClasses ecoreClass="CoffeeModeling.ecore#//Proceso">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CoffeeModeling.ecore#//Proceso/nombreProceso"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
